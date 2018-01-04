@@ -1,0 +1,22 @@
+// В этом файле должны быть стили для БЭМ-блока copyrights, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.copyrights {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__logo {
+    color: $white;
+
+    &:hover {
+      color: #2ea0d9;
+    }
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+
+}

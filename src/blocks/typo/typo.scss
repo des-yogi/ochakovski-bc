@@ -1,15 +1,55 @@
 // Этот блок ответственен ТОЛЬКО за типографику проекта.
 // Не пишите тут какую-либо стороннюю стилизацию.
 
-// @font-face {
-//   font-family: 'FONTNAME';
-//   src: url('../fonts/FONTNAME.woff2') format('woff2'),
-//        url('../fonts/FONTNAME.woff') format('woff'),
-//        url('../fonts/FONTNAME.ttf')  format('truetype');
-//   font-weight: 400;
-//   font-style: normal;
-// }
+/* montserrat-regular - latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+       url('../fonts/montserrat-v12-latin_cyrillic-ext_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v12-latin_cyrillic-ext_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
+/* montserrat-italic - latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Montserrat Italic'), local('Montserrat-Italic'),
+       url('../fonts/montserrat-v12-latin_cyrillic-ext_cyrillic-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v12-latin_cyrillic-ext_cyrillic-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-500 - latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Montserrat Medium'), local('Montserrat-Medium'),
+       url('../fonts/montserrat-v12-latin_cyrillic-ext_cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v12-latin_cyrillic-ext_cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-600 - latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+       url('../fonts/montserrat-v12-latin_cyrillic-ext_cyrillic-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v12-latin_cyrillic-ext_cyrillic-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-700 - latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+       url('../fonts/montserrat-v12-latin_cyrillic-ext_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v12-latin_cyrillic-ext_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
 
 body {
@@ -33,7 +73,7 @@ h4,
 h5,
 h6 {
   font-family: $font-family;
-  font-weight: 700;
+  font-weight: 600;
   line-height: $line-height;
   color: $title-color;
 }
@@ -58,36 +98,6 @@ h6 {
   margin-bottom: ($line-height / 2);
 }
 
-// .h1,
-/* h1 {
-  font-size: $font-size--h1;
-}
-
-// .h2,
-h2 {
-  font-size: $font-size--h2;
-}
-
-// .h3,
-h3 {
-  font-size: $font-size--h3;
-}
-
-// .h4,
-h4 {
-  font-size: $font-size--h4;
-}
-
-// .h5,
-h5 {
-  font-size: $font-size--h5;
-}
-
-// .h6,
-h6 {
-  font-size: $font-size--h6;
-} */
-
 // .p,
 p,
 ul,
@@ -108,7 +118,7 @@ address {
 
 ul,
 ol {
-  padding-left: 1.2em;
+  padding-left: 0;
 }
 
 ol ol,
@@ -128,11 +138,6 @@ hr {
   margin-bottom: $line-height;
   border: 0;
   border-top: 1px solid $border-color;
-}
-
-// .small,
-small {
-  // font-size: $font-size--small;
 }
 
 sub,
