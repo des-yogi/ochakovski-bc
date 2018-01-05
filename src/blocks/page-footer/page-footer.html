@@ -1,11 +1,30 @@
-<!--DEV
-
-Нужно убрать пробел между @-ами:
-
-@ @include('blocks/page-footer/page-footer.html')
-
--->
-
 <footer class="page-footer" role="contentinfo">
-  page-footer
+  <article class="contacts">
+    <h2 class="contacts__title">Свяжитесь с нами</h2>
+    <div class="contacts__part-1">
+      <address class="contacts__address">Адрес: <span>Очаківський, 5/6, 317, Київ, 03151</span></address>
+      <div class="contacts__work-time">Режим работы: <span>Круглосуточно</span></div>
+    </div>
+    <div class="contacts__part-2">
+      <div>Телефон:
+        <a href="tel:+380442275067" class="contacts__tel">+38 044 227 5067</a>
+      </div>
+      <div>E-mail:
+        <a href="mailto:ochavskiy@gmail.com" class="contacts__work-time">ochavskiy@gmail.com</a>
+      </div>
+    </div>
+  </article>
+  <article class="map">
+    <div class="map__inner">
+      Карта
+    </div>
+  </article>
+  <article class="copyrights">
+    <div class="container">
+      <span class="copyrights__text">©&thinsp;2017, Бизнес-центр «Очаковский». All Rights Reserved.</span>
+      <a href="http://it-doors.com/" class="copyrights__logo" target="_blank" rel="nofollow">
+        <svg width="90" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#it-doors-logo"></use></svg>
+      </a>
+      </div>
+  </article>
 </footer>
