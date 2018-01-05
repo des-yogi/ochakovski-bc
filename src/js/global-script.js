@@ -1,14 +1,22 @@
 // Если на проекте jQuery
 
-/*jQuery(document).ready(function ($) {
-  var options = {
-    $ArrowNavigatorOptions: {
-      $Class: $JssorArrowNavigator$,
-      $ChanceToShow: 2
+$(document).ready(function ($) {
+  var myHeaderSwiper = new Swiper('.top-slider', {
+    speed: 400,
+    spaceBetween: 0,
+    effect: 'slide',
+    grabCursor: true,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     }
-  };
-  var jssor_slider1 = new $JssorSlider$('slider1_container', options);
-});*/
+  });
+});
 
 // Изоляция без jQuery
 // (function(){

@@ -1,9 +1,64 @@
-// В этом файле должны быть стили для БЭМ-блока user-nav, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока user-nav, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .user-nav {
+  display: flex;
+  margin-right: 20px;
+  margin-left: auto;
+
+  @media (min-width: $screen-sm) {
+    margin-right: 30px;
+  }
+
+  @media (min-width: $screen-xl) {
+    order: 1;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
 
   $block-name:                &; // #{$block-name}__element
+
+  &__link {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    list-style-type: none;
+    color: $white;
+
+    &:hover,
+    &.active {
+      background-color: $white;
+      color: $bgr-dark;
+
+      &::before,
+      &::after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 2px;
+        height: 22px;
+        background-color: currentColor;
+      }
+
+      &::before {
+        bottom: 0;
+        left: 0;
+      }
+
+      &::after {
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  svg {
+    fill: currentColor;
+  }
 
 }
