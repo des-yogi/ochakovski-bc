@@ -140,3 +140,13 @@ img {
     $xl-grid-gutter:  0
   )
 }
+
+.row-full {
+  @include row(
+    $xs-grid-gutter:  0,
+    $sm-grid-gutter:  0,
+    $md-grid-gutter:  $grid-gutter-width,
+    $lg-grid-gutter:  $grid-gutter-width,
+    $xl-grid-gutter:  $grid-gutter-width
+  )
+}

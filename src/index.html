@@ -46,78 +46,151 @@
         </article>
 
         <article class="intro">
-          <div class="intro__inner">
-            <div class="intro__img-wrapper">
-              <img src="img/intro-image-mobile@1x.jpg" alt="" width="280" height="131">
+          <div class="container">
+
+            <div class="intro__inner">
+              <div class="intro__img-wrapper">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/intro-image-desktop@1x.jpg">
+                  <source media="(min-width: 768px)" srcset="img/intro-image-tablet@1x.jpg">
+                  <img src="img/intro-image-mobile@1x.jpg" alt="" width="280" height="131">
+                </picture>
+              </div>
+              <div class="intro__text">
+                <h2 class="intro__title">Очаковский Бизнес-центр</h2>
+                <p class="intro__para">IQ — бизнес-центр класса А+ в Печерском районе Киева, где уникальная архитектура и продуманное наполнение сочетаются с высокой технологичностью и эффективностью.</p>
+              </div>
             </div>
-            <div class="intro__text">
-              <h2 class="intro__title">Очаковский Бизнес-центр</h2>
-              <p class="intro__para">IQ — бизнес-центр класса А+ в Печерском районе Киева, где уникальная архитектура и продуманное наполнение сочетаются с высокой технологичностью и эффективностью.</p>
-            </div>
+
           </div>
         </article>
 
         <article class="news">
           <div class="news__title-wrapper">
-            <h2 class="news__title">Новости</h2>
+            <div class="container">
+              <div class="row">
+                <h2 class="news__title">Новости</h2>
+              </div>
+            </div>
           </div>
 
-          <div class="news__slides">
-            <section class="news__slide">
-              <a class="news__link" href="">
+          <div class="swiper-container  news__slides">
+
+            <section class="swiper-wrapper  news__slide-wrapper">
+
+              <a class="swiper-slide  news__link" href="">
                 <div class="news__img-wrapper">
-                  <img src="img/news-1-mobile@1x.jpg" alt="Новость" width="230" height="210">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/news-1-desktop@1x.jpg">
+                    <source media="(min-width: 768px)" srcset="img/news-1-tablet@1x.jpg">
+                    <img src="img/news-1-mobile@1x.jpg" alt="Новость" width="230" height="210">
+                  </picture>
                 </div>
-                <h3 class="news__title">С Новым Годом!</h3>
+                <h3 class="news__sub-title">С Новым Годом!</h3>
+                <p class="news__para">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
                 <p class="news__para">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
                 <span class="news__data">01.01.2018</span>
               </a>
+
+              <a class="swiper-slide  news__link" href="">
+                <div class="news__img-wrapper">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/news-1-desktop@1x.jpg">
+                    <source media="(min-width: 768px)" srcset="img/news-1-tablet@1x.jpg">
+                    <img src="img/news-1-mobile@1x.jpg" alt="Новость" width="230" height="210">
+                  </picture>
+                </div>
+                <h3 class="news__sub-title">С Новым Годом!</h3>
+                <p class="news__para">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+                <span class="news__data">01.01.2018</span>
+              </a>
+
+              <a class="swiper-slide  news__link" href="">
+                <div class="news__img-wrapper">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/news-1-desktop@1x.jpg">
+                    <source media="(min-width: 768px)" srcset="img/news-1-tablet@1x.jpg">
+                    <img src="img/news-1-mobile@1x.jpg" alt="Новость" width="230" height="210">
+                  </picture>
+                </div>
+                <h3 class="news__sub-title">С Новым Годом!</h3>
+                <p class="news__para">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+                <span class="news__data">01.01.2018</span>
+              </a>
+
             </section>
+
           </div>
 
-          <a href="" class="news__page-link">Читать далее</a>
+          <div class="container  news__slides-control">
+            <div class="swiper-pagination  news__slide-num"></div>
+            <div class="swiper-scrollbar  news__scrollbar"></div>
+            <a href="" class="btn  btn--more  news__page-link">Читать далее
+              <svg width="9" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#next-icon"></use></svg>
+            </a>
+          </div>
+
         </article>
 
         <article class="services">
+
           <div class="services__title-wrapper">
-            <h2 class="services__title">Сервисы</h2>
+            <div class="container">
+              <div class="row">
+                <h2 class="services__title">Сервисы</h2>
+              </div>
+            </div>
           </div>
-          <section class="services__parking">
-            <a href="" class="services__img-wrapper">
-              <img src="img/parking-mobile@1x.jpg" alt="Паркинг" width="265" height="125">
-            </a>
-            <div class="services__text">
-              <h3 class="services__title">Парковка</h3>
-              <p class="services__para">Парковка расположена в наиболее комфортной зоне с гарантированной изоляцией от основного потока.</p>
-              <p>
-                <a href="/" class="services__link">Читать далее</a>
+
+          <div class="container  services__wrapper">
+
+            <section class="row-full  services__item">
+              <a href="" class="services__img-wrapper">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/parking-desktop@1x.jpg">
+                  <source media="(min-width: 768px)" srcset="img/parking-tablet@1x.jpg">
+                  <img src="img/parking-mobile@1x.jpg" alt="Паркинг" width="265" height="125">
+                </picture>
+              </a>
+              <div class="services__text">
+                <h3 class="services__sub-title">Парковка</h3>
+                <p class="services__para">Парковка расположена в наиболее комфортной зоне с гарантированной изоляцией от основного потока.</p>
+              </div>
+              <p class="services__link-wrapper">
+                <a href="/" class="btn  btn--more  services__link">Читать далее
+                  <svg width="9" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#next-icon"></use></svg>
+                </a>
               </p>
-            </div>
-          </section>
-          <section class="services__parking">
-            <a href="" class="services__img-wrapper">
-              <img src="img/parking-mobile@1x.jpg" alt="Паркинг" width="265" height="125">
-            </a>
-            <div class="services__text">
-              <h3 class="services__title">Автомойка</h3>
-              <p class="services__para">Парковка расположена в наиболее комфортной зоне с гарантированной изоляцией от основного потока.</p>
-              <p>
-                <a href="/" class="services__link">Читать далее</a>
-              </p>
-            </div>
-          </section>
-          <section class="services__parking">
-            <a href="" class="services__img-wrapper">
-              <img src="img/parking-mobile@1x.jpg" alt="Паркинг" width="265" height="125">
-            </a>
-            <div class="services__text">
-              <h3 class="services__title">Ресторан</h3>
-              <p class="services__para">Ресторан быстрого питания, это новое заведение в Очакивском бизнес-центре.</p>
-              <p>
-                <a href="/" class="services__link">Читать далее</a>
-              </p>
-            </div>
-          </section>
+            </section>
+
+            <!-- <section class="services__item">
+              <a href="" class="services__img-wrapper">
+                <img src="img/parking-mobile@1x.jpg" alt="Паркинг" width="265" height="125">
+              </a>
+              <div class="services__text">
+                <h3 class="services__sub-title">Автомойка</h3>
+                <p class="services__para">Парковка расположена в наиболее комфортной зоне с гарантированной изоляцией от основного потока.</p>
+                <p>
+                  <a href="/" class="services__link">Читать далее</a>
+                </p>
+              </div>
+            </section>
+
+            <section class="services__item">
+              <a href="" class="services__img-wrapper">
+                <img src="img/parking-mobile@1x.jpg" alt="Паркинг" width="265" height="125">
+              </a>
+              <div class="services__text">
+                <h3 class="services__sub-title">Ресторан</h3>
+                <p class="services__para">Ресторан быстрого питания, это новое заведение в Очакивском бизнес-центре.</p>
+                <p>
+                  <a href="/" class="services__link">Читать далее</a>
+                </p>
+              </div>
+            </section> -->
+
+          </div>
+
         </article>
 
         <article class="partners">

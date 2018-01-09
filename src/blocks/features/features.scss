@@ -4,14 +4,16 @@
 
 .features {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 
   $block-name:                &; // #{$block-name}__element
 
   &__title-wrapper {
     background-color: $bgr-light;
+    margin-bottom: 35px;
 
     @media (min-width: $screen-md) {
+      margin-bottom: 60px;
       background: linear-gradient(to right, $bgr-dark, $bgr-dark 50%, $bgr-light 50%, $bgr-light);
     }
   }
@@ -33,13 +35,10 @@
     )
   }
 
-  &__container {
-
-  }
 
   &__list {
     margin: 0;
-    padding-top: 40px;
+    padding-top: 5px;
     list-style-type: none;
   }
 
