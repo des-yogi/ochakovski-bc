@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока top-slider, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока top-slider, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
@@ -6,4 +6,74 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.top-slider__controls {
+  display: none;
+
+  .swiper-button-prev,
+  .swiper-button-next,
+  .swiper-pagination {
+    // display: none;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: -13px;
+    margin-top: 0;
+    transform: scale(0.5);
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+
+  .swiper-pagination {
+    width: 100%;
+    z-index: 10;
+  }
+
+  .swiper-pagination-bullet {
+    display: inline-block;
+    vertical-align: center;
+    width: 11px;
+    height: 11px;
+    margin: 0 10px;
+    background-color: transparent;
+    border: 2px solid $bgr-dark;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $bgr-dark;
+    opacity: 1;
+  }
+
+  @media (min-width: $screen-md) {
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 20px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

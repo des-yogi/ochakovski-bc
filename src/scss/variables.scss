@@ -1,7 +1,7 @@
 // Базовые цвета https://colorscheme.ru/color-converter.html
 
 $black:                       hsl(0, 0%, 0%);
- $white:                       hsl(0, 0%, 100%);
+$white:                       hsl(0, 0%, 100%);
 
 // Семантические цвета
 
@@ -44,9 +44,9 @@ $screen-xl:                   1200px;
 // $screen-xxl:                  1800px;
 
 $container-sm:                100%;
-$container-md:                $screen-md - 40;
-$container-lg:                $screen-lg - 40;
-$container-xl:                $screen-xl - 40;
+$container-md:                100%;
+$container-lg:                100%;
+$container-xl:                $screen-xl - 20;
 // $container-xxl:               $screen-xxl - 20;
 
 

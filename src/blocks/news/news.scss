@@ -1,9 +1,234 @@
-// В этом файле должны быть стили для БЭМ-блока news, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока news, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .news {
+  padding-bottom: 60px;
 
   $block-name:                &; // #{$block-name}__element
+
+  &__title-wrapper {
+    margin-bottom: 35px;
+    background-color: $bgr-light;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 60px;
+      background: linear-gradient(to right, $bgr-light, $bgr-light 50%, $bgr-dark 50%, $bgr-dark);
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 0;
+    text-align: center;
+    color: $white;
+    background-color: $bgr-dark;
+
+    @include col-offset (
+      $screen: md,
+      $column: 6,
+      $columns: $grid-columns
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  6,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+  }
+
+  &__slides {
+
+    @include container (
+      $xs-grid-gutter:  0,
+      $sm-grid-gutter:  0,
+      $md-grid-gutter:  80px,
+      $lg-grid-gutter:  80px,
+      $xl-grid-gutter:  80px
+    )
+
+    @media (min-width: $screen-md) {
+      &::before,
+      &::after {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        content: "";
+        display: block;
+        width: 40px;
+        height: 100%;
+        background-color: $white;
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+      }
+    }
+  }
+
+  &__slide-wrapper {
+    align-items: stretch !important;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    height: auto;
+    padding-bottom: 15px;
+    text-decoration: none;
+    background-color: $bgr-light;
+
+    p + p {
+      margin-top: 10px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: auto;
+    }
+  }
+
+  &__img-wrapper {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+
+    @media (min-width: $screen-md) {
+      // width: 335px;
+      height: 250px !important;
+    }
+
+    @media (min-width: $screen-xl) {
+      // width: 360px;
+      height: 250px !important;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+
+      /* @media (min-width: $screen-md) {
+        width: 100%;
+        height: auto;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 385px;
+        height: auto;
+      } */
+    }
+  }
+
+  &__sub-title {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: $title-color;
+
+    @media (min-width: $screen-md) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  &__para {
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: $text-color;
+
+    @media (min-width: $screen-md) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  &__data {
+    display: block;
+    margin-top: auto;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: $text-muted;
+
+    @media (min-width: $screen-md) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  &__slides-control {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 60px;
+    }
+  }
+
+  &__page-link {
+    display: block;
+  }
+
+  &__slide-num {
+    position: static;
+    width: 48px;
+    height: 32px;
+    background-color: $bgr-dark;
+
+    .swiper-pagination-current {
+      padding-left: 7px;
+      font-size: 24px;
+      font-weight: 500;
+      color: $white;
+    }
+
+    .swiper-pagination-total {
+      display: none;
+    }
+  }
+
+  &__scrollbar {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      width: 70%;
+      height: 5px;
+      transform: translateY(12px);
+
+      /* .swiper-scrollbar-drag {
+        width: 20px !important;
+        height: 20px;
+        margin-top: -7px;
+        background-color: transparent;
+        cursor: pointer;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "";
+          display: block;
+          width: 20px;
+          height: 20px;
+          // background-color: red;
+          background: url(../img/dragger.svg);
+          opacity: 0.7;
+        }
+      } */
+    }
+  }
 
 }

@@ -1,54 +1,83 @@
-<!--DEV
-
-Нужно убрать пробел между @-ами:
-
-@ @include('blocks/page-header/page-header.html')
-
--->
-
 <header class="page-header" role="banner">
 
   <div class="page-header__top">
-    <article class="logo">
-      <a href="/">
-        <img src="img/ochakovski-bc.svg" alt="Очаковский бизнес-центр" width="187" height="40">
-      </a>
-    </article>
-    <article class="user-nav">
-      <ul class="user-nav__list">
-        <li class="user-nav__item"></li>
-      </ul>
-    </article>
-    <article class="main-nav">
+
+    <div class="page-header__container">
+
+      <article class="logo">
+        <a href="/">
+          <img src="img/ochakovski-bc.svg" alt="Очаковский бизнес-центр" width="187" height="40">
+        </a>
+      </article>
+
+      <article class="user-nav">
+        <a href="" class="user-nav__link">
+          <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#login-icon"></use></svg>
+        </a>
+      </article>
+
       <div class="burger">
         <a class="burger__link">Кнопка меню
-          <div class="burger__item"> </div>
+          <span class="burger__item"></span>
         </a>
       </div>
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a href="" class="main-nav__link">Новости</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="" class="main-nav__link">Аренда</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="" class="main-nav__link">Сервисы</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="" class="main-nav__link">О нас</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="" class="main-nav__link">Контакты</a>
-        </li>
-      </ul>
-    </article>
-  </div>
-  <div id="top-slider-container" class="top-slider">
-    <div class="top-slider__inner">
-      <div class="top-slider__slide">
-        <img src="img/image-1-mobile@1x.jpg" width="320" height="150" />
-      </div>
+
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link">Новости</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link">Аренда</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link">Сервисы</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link">О нас</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
     </div>
   </div>
+
+  <div class="top-slider__wrapper">
+    <div id="top-slider" class="top-slider">
+      <div class="swiper-wrapper  top-slider__inner">
+        <div class="swiper-slide  top-slider__slide">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/image-1-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/image-1-tablet@1x.jpg">
+            <img src="img/image-1-mobile@1x.jpg" width="320" height="150" />
+          </picture>
+        </div>
+        <div class="swiper-slide  top-slider__slide">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/image-1-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/image-1-tablet@1x.jpg">
+            <img src="img/image-1-mobile@1x.jpg" width="320" height="150" />
+          </picture>
+        </div>
+        <div class="swiper-slide  top-slider__slide">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/image-1-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/image-1-tablet@1x.jpg">
+            <img src="img/image-1-mobile@1x.jpg" width="320" height="150" />
+          </picture>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-slider__controls">
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev  swiper-button-black"></div>
+      <div class="swiper-button-next  swiper-button-black"></div>
+    </div>
+
+  </div>
+
 </header>

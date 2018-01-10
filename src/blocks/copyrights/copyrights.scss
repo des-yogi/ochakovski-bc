@@ -3,10 +3,36 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .copyrights {
+  font-size: 10px;
+  color: $white;
+  background-color: $bgr-dark;
+
+  @media (min-width: $screen-md) {
+    font-size: 14px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    span {
+      display: block;
+      width: calc(100% - 95px);
+    }
+
+    a {
+      display: block;
+      width: 95px;
+    }
+  }
+
   &__logo {
+    text-align: right;
     color: $white;
 
     &:hover {
@@ -14,6 +40,7 @@
     }
 
     svg {
+      display: inline-block;
       fill: currentColor;
     }
   }

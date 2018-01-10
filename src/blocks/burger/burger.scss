@@ -6,6 +6,8 @@ $toggler-part-height:         3px !default;
 $toggler-part-bg-color:       #000 !default;
 
 .burger {
+  margin-top: auto;
+  margin-bottom: auto;
 
   $block-name:                &; // #{$block-name}__element
 
@@ -13,59 +15,55 @@ $toggler-part-bg-color:       #000 !default;
   z-index: 1;
   display: flex;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 20px;
   user-select: none;
   cursor: pointer;
 
-  > span {
-    display: inline-block;
-    width: 100%;
-    height: $toggler-part-height;
-    background: $toggler-part-bg-color;
+  @media (min-width: $screen-xl) {
+    display: none;
+  }
+
+  &__link {
     position: relative;
-    transition: background $transition-time $transition-time;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    @include text-hide;
+    color: $white;
 
-    &:before,
-    &:after {
-      content: '';
+    &::before,
+    &::after {
       position: absolute;
+      display: block;
+      content: "";
+      width: 13px;
+      height: 2px;
+      background-color: currentColor;
+    }
+
+    &::before {
+      top: 0;
       left: 0;
-      width: 100%;
-      height: $toggler-part-height;
-      background: $toggler-part-bg-color;
-      transform-origin: 50% 50%;
-      transition: top $transition-time $transition-time, transform $transition-time;
+      // transform: translateY(-8px);
     }
 
-    &:before {
-      top: -10px;
+    &::after {
+      bottom: 0;
+      right: 0;
+      // transform: translateY(8px);
     }
 
-    &:after {
-      top: 10px;
+    &:hover {
+      color: red;
     }
   }
 
-  &--close {
-
-    > span {
-      transition: background $transition-time 0s;
-      background: transparent;
-
-      &:before,
-      &:after {
-        transition: top $transition-time, transform $transition-time $transition-time;
-        top: 0;
-      }
-
-      &:before {
-        transform: rotate3d(0, 0, 1, 45deg);
-      }
-
-      &:after {
-        transform: rotate3d(0, 0, 1, -45deg);
-      }
-    }
+  &__item {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: currentColor;
   }
+
 }

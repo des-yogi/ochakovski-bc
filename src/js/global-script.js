@@ -1,14 +1,78 @@
 // Если на проекте jQuery
 
-/*jQuery(document).ready(function ($) {
-  var options = {
-    $ArrowNavigatorOptions: {
-      $Class: $JssorArrowNavigator$,
-      $ChanceToShow: 2
+$(document).ready(function ($) {
+  var myHeaderSwiper = new Swiper('.top-slider', {
+    speed: 400,
+    spaceBetween: 0,
+    effect: 'slide',
+    grabCursor: true,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     }
-  };
-  var jssor_slider1 = new $JssorSlider$('slider1_container', options);
-});*/
+  });
+
+  var newsSwiper = new Swiper('.news__slides', {
+    roundLengths: true,
+    speed: 400,
+    slidesPerView: 3,
+    spaceBetween: 20,
+    //centeredSlides: true,
+    pagination: {
+      el: '.news__slide-num',
+      type: 'fraction',
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: false,
+      draggable: true,
+    },
+    breakpoints: {
+      767: {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 20
+      },
+      1199: {
+        slidesPerView: 2,
+        // centeredSlides: true,
+        spaceBetween: 20
+      }
+    },
+    effect: 'slide',
+    grabCursor: true,
+    loop: true
+  });
+
+  var partnersLogoSwiper = new Swiper('.partners__inner', {
+    speed: 400,
+    spaceBetween: 60,
+    slidesPerView: 4,
+    // centeredSlides: true,
+    roundLengths: true,
+    effect: 'slide',
+    grabCursor: true,
+    loop: true,
+    breakpoints: {
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 35,
+        centeredSlides: false
+      },
+      1199: {
+        slidesPerView: 4,
+        spaceBetween: 60,
+        centeredSlides: false
+      }
+    }
+  });
+
+});
 
 // Изоляция без jQuery
 // (function(){

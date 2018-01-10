@@ -4,5 +4,21 @@
 
 .page-footer {
 
+  @media (min-width: $screen-xl) {
+    background: linear-gradient(to right, #545454, #545454 50%, #f4f4f4 50%, #f4f4f4);
+  }
+
   $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      width: 1180px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
 }

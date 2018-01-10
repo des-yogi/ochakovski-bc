@@ -52,6 +52,80 @@
     }
   }
 
+  &--more {
+    position: relative;
+    @include text-hide;
+    display: block;
+    width: 80px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+    color: $white;
+    background-color: $bgr-dark;
+    border-radius: 0;
+    transition: all 0.35s ease-in-out;
+
+    svg {
+      display: block;
+      width: 9px;
+      height: 18px;
+      margin: auto;
+      fill: currentColor;
+    }
+
+    &:hover {
+      color: $bgr-dark;
+      background-color: $white;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 10px;
+        height: 18px;
+        background-color: $bgr-dark;
+      }
+
+      &::before {
+        left: 0;
+        top: 14px;
+      }
+
+      &::after {
+        right: 0;
+        top: 0;
+      }
+    }
+
+    &:active {
+      color: $white;
+      background-color: $bgr-dark;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-color: $white;
+      }
+
+      &::before {
+        left: 0;
+        top: 0;
+      }
+
+      &::after {
+        right: 0;
+        top: 20px;
+      }
+    }
+  }
+
   // &__icon {
   //   display: inline-block;
   //   vertical-align: middle;
