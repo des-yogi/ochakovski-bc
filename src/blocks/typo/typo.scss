@@ -146,6 +146,7 @@ figure {
   margin-bottom: ($line-height / 2);
   font-size: 14px;
   font-weight: 400;
+  line-height: 1.5;
   color: currentColor;
 
   @media (min-width: $screen-md) {

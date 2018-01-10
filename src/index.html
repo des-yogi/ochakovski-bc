@@ -32,15 +32,15 @@
 
           <div class="container  features__container">
             <ul class="row  features__list">
-              <li class="features__item  features__item--location">Удачное местоположение</li>
-              <li class="features__item features__item--green-zone">Зеленая зона — Сквер</li>
-              <li class="features__item  features__item--quite-zone">Тихое место</li>
-              <li class="features__item  features__item--energy-save">Енергетическая безопасность</li>
-              <li class="features__item  features__item--24x7-guard">Круглосуточная охрана</li>
-              <li class="features__item  features__item--access-control">Контроль доступа</li>
-              <li class="features__item  features__item--cctv">Видеонаблюдение</li>
-              <li class="features__item  features__item--parking">Парковка</li>
-              <li class="features__item  features__item--cleaning">Уборка</li>
+              <li class="features__item  features__item--location"><span class="features__descr  features__descr--location">Удачное местоположение</span></li>
+              <li class="features__item features__item--green-zone"><span class="features__descr  features__descr--green-zone">Зеленая зона — Сквер</span></li>
+              <li class="features__item  features__item--quite-zone"><span class="features__descr  features__descr--quite-zone">Тихое место</span></li>
+              <li class="features__item  features__item--energy-save"><span class="features__descr  features__descr--energy-save">Енергетическая безопасность</span></li>
+              <li class="features__item  features__item--24x7-guard"><span class="features__descr  features__descr--24x7-guard">Круглосуточная охрана</span></li>
+              <li class="features__item  features__item--access-control"><span class="features__descr  features__descr--access-control">Контроль доступа</span></li>
+              <li class="features__item  features__item--cctv"><span class="features__descr  features__descr--cctv">Видеонаблюдение</span></li>
+              <li class="features__item"><span class="features__descr  features__descr--parking">Парковка</span></li>
+              <li class="features__item"><span class="features__descr  features__descr--cleaning">Уборка</span></li>
             </ul>
           </div>
         </article>
@@ -144,7 +144,7 @@
 
           <div class="container  services__wrapper">
 
-            <section class="row-full  services__item">
+            <section class="services__item">
               <a href="" class="services__img-wrapper">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="img/parking-desktop@1x.jpg">
@@ -163,101 +163,118 @@
               </p>
             </section>
 
-            <!-- <section class="services__item">
+            <section class="services__item  services__item--reflect">
               <a href="" class="services__img-wrapper">
-                <img src="img/parking-mobile@1x.jpg" alt="Паркинг" width="265" height="125">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/parking-desktop@1x.jpg">
+                  <source media="(min-width: 768px)" srcset="img/parking-tablet@1x.jpg">
+                  <img src="img/parking-mobile@1x.jpg" alt="Паркинг" width="265" height="125">
+                </picture>
               </a>
-              <div class="services__text">
-                <h3 class="services__sub-title">Автомойка</h3>
+              <div class="services__text  services__text--reflect">
+                <h3 class="services__sub-title">Парковка</h3>
                 <p class="services__para">Парковка расположена в наиболее комфортной зоне с гарантированной изоляцией от основного потока.</p>
-                <p>
-                  <a href="/" class="services__link">Читать далее</a>
-                </p>
               </div>
+              <p class="services__link-wrapper  services__link-wrapper">
+                <a href="/" class="btn  btn--more  services__link  services__link--reflect">Читать далее
+                  <svg width="9" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#next-icon"></use></svg>
+                </a>
+              </p>
             </section>
-
-            <section class="services__item">
-              <a href="" class="services__img-wrapper">
-                <img src="img/parking-mobile@1x.jpg" alt="Паркинг" width="265" height="125">
-              </a>
-              <div class="services__text">
-                <h3 class="services__sub-title">Ресторан</h3>
-                <p class="services__para">Ресторан быстрого питания, это новое заведение в Очакивском бизнес-центре.</p>
-                <p>
-                  <a href="/" class="services__link">Читать далее</a>
-                </p>
-              </div>
-            </section> -->
 
           </div>
 
         </article>
 
         <article class="partners">
-          <div class="partners__title-wrapper">
-            <h2 class="partners__title">Наши партнеры</h2>
+
+          <div class="title-wrapper  title-wrapper--right  partners__title-wrapper">
+            <div class="container">
+              <div class="row">
+                <h2 class="title  title--right  partners__title">Наши партнеры</h2>
+              </div>
+            </div>
           </div>
-          <div class="partners__inner">
-            <ul class="partners__list">
-              <li class="partners__item">
+
+          <div class="container  swiper-container  partners__inner">
+            <ul class="swiper-wrapper  partners__list">
+
+              <li class="swiper-slide  partners__item">
                 <a href="" class="partners__link">
-                  <img src="img/agrar-found-logo.png" alt="Аграрный фонд">
+                  <img src="img/agrar-found-logo.png" alt="Аграрный фонд" width="100">
                 </a>
               </li>
-              <li class="partners__item">
+
+              <li class="swiper-slide  partners__item">
                 <a href="" class="partners__link">
-                  <img src="img/agrar-found-logo.png" alt="Аграрный фонд">
+                  <img src="img/agrar-found-logo.png" alt="Аграрный фонд" width="100">
                 </a>
               </li>
-              <li class="partners__item">
+
+              <li class="swiper-slide  partners__item">
                 <a href="" class="partners__link">
-                  <img src="img/agrar-found-logo.png" alt="Аграрный фонд">
+                  <img src="img/agrar-found-logo.png" alt="Аграрный фонд" width="100">
                 </a>
               </li>
-              <li class="partners__item">
+
+              <li class="swiper-slide  partners__item">
                 <a href="" class="partners__link">
-                  <img src="img/agrar-found-logo.png" alt="Аграрный фонд">
+                  <img src="img/agrar-found-logo.png" alt="Аграрный фонд" width="100">
                 </a>
               </li>
+
             </ul>
           </div>
+
         </article>
 
         <article class="gallery">
-          <div class="gallery__title-wrapper">
-            <h2 class="gallery__title">Галерея</h2>
+
+          <div class="title-wrapper  gallery__title-wrapper">
+            <div class="container">
+              <div class="row">
+                <h2 class="title  gallery__title">Галерея</h2>
+              </div>
+            </div>
           </div>
+
           <div class="gallery__inner">
-            <div class="gallery__small-img">
-              <img src="img/gallery-small-img-tmb-mobile@1x.jpg" alt="Галерея" width="155" height="155">
-            </div>
-            <div class="gallery__small-img">
-              <img src="img/gallery-small-img-tmb-mobile@1x.jpg" alt="Галерея" width="155" height="155">
-            </div>
-            <div class="gallery__big-img">
-              <img src="img/gallery-big-img-tmb-mobile@1x.jpg" alt="Галерея" width="320" height="155">
-            </div>
-            <div class="gallery__big-img">
-              <img src="img/gallery-big-img-tmb-mobile@1x.jpg" alt="Галерея" width="320" height="155">
-            </div>
-            <div class="gallery__small-img">
-              <img src="img/gallery-small-img-tmb-mobile@1x.jpg" alt="Галерея" width="155" height="155">
-            </div>
-            <div class="gallery__small-img">
-              <img src="img/gallery-small-img-tmb-mobile@1x.jpg" alt="Галерея" width="155" height="155">
-            </div>
+
+              <div class="gallery__small-img">
+                <img src="img/gallery-small-img-tmb-mobile@1x.jpg" alt="Галерея" width="155" height="155">
+              </div>
+              <div class="gallery__small-img">
+                <img src="img/gallery-small-img-tmb-mobile@1x.jpg" alt="Галерея" width="155" height="155">
+              </div>
+              <div class="gallery__big-img">
+                <img src="img/gallery-big-img-tmb-mobile@1x.jpg" alt="Галерея" width="320" height="155">
+              </div>
+              <div class="gallery__big-img">
+                <img src="img/gallery-big-img-tmb-mobile@1x.jpg" alt="Галерея" width="320" height="155">
+              </div>
+              <div class="gallery__small-img">
+                <img src="img/gallery-small-img-tmb-mobile@1x.jpg" alt="Галерея" width="155" height="155">
+              </div>
+              <div class="gallery__small-img">
+                <img src="img/gallery-small-img-tmb-mobile@1x.jpg" alt="Галерея" width="155" height="155">
+              </div>
+
           </div>
-          <div class="gallery__btn-wrapper">
-            <a href="" class="gallery__link">Смотреть галерею</a>
+
+          <div class="container  gallery__btn-wrapper">
+            <a href="" class="btn  btn--more  gallery__link">Смотреть галерею
+              <svg width="9" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#next-icon"></use></svg>
+            </a>
           </div>
+
         </article>
 
       </main>
 
-    </div>
+      <div class="page__footer-wrapper">
+        @@include('blocks/page-footer/page-footer.html')
+      </div>
 
-    <div class="page__footer-wrapper">
-      @@include('blocks/page-footer/page-footer.html')
     </div>
 
   </div>

@@ -43,9 +43,7 @@
   }
 
   &__item {
-    position: relative;
     margin-bottom: 45px;
-    padding-left: 50px;
     font-size: 14px;
     font-weight: 500;
 
@@ -66,6 +64,11 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  .features__descr {
+    position: relative;
+    padding-left: 50px;
 
     &::before {
       position: absolute;
@@ -78,47 +81,54 @@
     }
 
     @media (min-width: $screen-md) {
+      margin-left: 30px;
+      padding-left: 50px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-left: 85px;
       padding-left: 50px;
     }
 
     @media (min-width: $screen-xl) {
+      margin-left: 65px;
       padding-left: 50px;
     }
   }
 
-  &__item--location::before {
+  .features__descr--location::before {
     background: transparent url(../img/location.svg) no-repeat center center;
   }
 
-  &__item--green-zone::before {
+  .features__descr--green-zone::before {
     background: transparent url(../img/green-zone.svg) no-repeat center center;
   }
 
-  &__item--quite-zone::before {
+  .features__descr--quite-zone::before {
     background: transparent url(../img/quite-zone.svg) no-repeat center center;
   }
 
-  &__item--energy-save::before {
+  .features__descr--energy-save::before {
     background: transparent url(../img/energy-save.svg) no-repeat center center;
   }
 
-  &__item--24x7-guard::before {
+  .features__descr--24x7-guard::before {
     background: transparent url(../img/24x7-guard.svg) no-repeat center center;
   }
 
-  &__item--access-control::before {
+  .features__descr--access-control::before {
     background: transparent url(../img/access-control.svg) no-repeat center center;
   }
 
-  &__item--cctv::before {
+  .features__descr--cctv::before {
     background: transparent url(../img/cctv.svg) no-repeat center center;
   }
 
-  &__item--parking::before {
+  .features__descr--parking::before {
     background: transparent url(../img/parking.svg) no-repeat center center;
   }
 
-  &__item--cleaning::before {
+  .features__descr--cleaning::before {
     background: transparent url(../img/cleaning.svg) no-repeat center center;
   }
 

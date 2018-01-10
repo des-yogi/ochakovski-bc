@@ -129,27 +129,42 @@
   &__sub-title {
     margin-top: 25px;
     margin-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: 20px;
     font-weight: 600;
     color: $title-color;
+
+    @media (min-width: $screen-md) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
 
   &__para {
     margin: 0;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     color: $text-color;
+
+    @media (min-width: $screen-md) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
 
   &__data {
     display: block;
     margin-top: auto;
     padding-top: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     color: $text-muted;
+
+    @media (min-width: $screen-md) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
 
   &__slides-control {
