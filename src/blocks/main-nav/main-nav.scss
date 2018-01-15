@@ -11,7 +11,9 @@
   margin: 0;
   padding: 20px 20px;
   background-color: rgba(0, 0, 0, 0.9);
-  transform: translate(-100vw, 64px);
+  overflow-y: auto;
+  transform: translate(-105vw, 64px);
+  transition: transform 0.35s ease-in-out;
 
   @media (min-width: $screen-xl) {
     position: static;
@@ -26,6 +28,10 @@
   }
 
   $block-name:                &; // #{$block-name}__element
+
+  &--open {
+    transform: translate(0, 64px);
+  }
 
   &__list {
     margin: 0;
@@ -52,33 +58,40 @@
   &__link {
     display: block;
     padding: 0.5em;
+    margin-top: 15px;
+    margin-bottom: 25px;
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
     color: currentColor;
+    transition: all 0.35s ease-in;
 
     &:hover,
     &.active {
+      background-color: $bgr-light;
+      color: $title-color;
       text-decoration: none;
 
-      &::before,
-      &::after {
-        position: absolute;
-        display: block;
-        content: "";
-        width: 2px;
-        height: 22px;
-        background-color: currentColor;
-      }
+      @media (min-width: $screen-xl) {
+        &::before,
+        &::after {
+          position: absolute;
+          display: block;
+          content: "";
+          width: 2px;
+          height: 22px;
+          background-color: currentColor;
+        }
 
-      &::before {
-        bottom: 0;
-        left: 0;
-      }
+        &::before {
+          bottom: 0;
+          left: 0;
+        }
 
-      &::after {
-        top: 0;
-        right: 0;
+        &::after {
+          top: 0;
+          right: 0;
+        }
       }
 
       @media (min-width: $screen-xl) {
@@ -89,6 +102,8 @@
 
     @media (min-width: $screen-xl) {
       position: relative;
+      margin-top: 0;
+      margin-bottom: 0;
       padding-top: 20px;
       padding-bottom: 20px;
       padding-left: 15px;

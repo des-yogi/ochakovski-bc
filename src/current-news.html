@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Бизнес-центр «Очаковский»</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main role="main">
+
+        <article class="container current-news">
+
+          <div class="current-news__inner">
+
+            <div class="current-news__link-wrapper">
+              <a href="news.html" class="btn  btn--more current-news__back-link">
+                <svg width="9" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#next-icon"></use></svg>
+              </a>
+              <span class="current-news__text-link">Все новости</span>
+            </div>
+
+            <a class="news__link">
+              <div class="news__img-wrapper">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/news-1-desktop@1x.jpg">
+                  <source media="(min-width: 768px)" srcset="img/news-1-tablet@1x.jpg">
+                  <img src="img/news-1-mobile@1x.jpg" alt="Новость" width="230" height="210">
+                </picture>
+              </div>
+              <div class="current-news__text-wrapper">
+                <h1 class="current-news__title">С Новым Годом!</h1>
+                <p class="news__para">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текста если знаках обеспечивает выйти рыбного первую великий продолжил лучше пустился толку запятой семантика, за заманивший силуэт решила бросил, имеет алфавит он приставка единственное переписывается переписали. Оксмокс агенство скатился текстов приставка ipsum предупредила ему свое взгляд, над даже правилами безорфографичный использовало, грустный дорогу точках они гор. Речью.</p>
+                <p class="news__para">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+                <span class="news__data">01.01.2018</span>
+              </div>
+            </a>
+
+          </div>
+
+
+        </article>
+
+
+
+      </main>
+
+      <div class="page__footer-wrapper">
+        @@include('blocks/page-footer/page-footer.html')
+      </div>
+
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

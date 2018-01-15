@@ -30,7 +30,11 @@
     "gallery": [],
     "contacts": [],
     "map": [],
-    "copyrights": []
+    "copyrights": [],
+    "news-page": [],
+    "current-news": [],
+    "contacts-page": [],
+    "write-us": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -31,26 +31,26 @@
               </a>
             </article>
             <div class="burger">
-              <a class="burger__link">Кнопка меню
+              <a id="burger" class="burger__link">Кнопка меню
                 <span class="burger__item"></span>
               </a>
             </div>
             <nav class="main-nav">
               <ul class="main-nav__list">
                 <li class="main-nav__item">
-                  <a href="" class="main-nav__link">Новости</a>
+                  <a href="news.html" class="main-nav__link">Новости</a>
                 </li>
                 <li class="main-nav__item">
-                  <a href="" class="main-nav__link">Аренда</a>
+                  <a href="lease.html" class="main-nav__link">Аренда</a>
                 </li>
                 <li class="main-nav__item">
-                  <a href="" class="main-nav__link">Сервисы</a>
+                  <a href="services.html" class="main-nav__link">Сервисы</a>
                 </li>
                 <li class="main-nav__item">
-                  <a href="" class="main-nav__link">О нас</a>
+                  <a href="about.html" class="main-nav__link">О нас</a>
                 </li>
                 <li class="main-nav__item">
-                  <a href="" class="main-nav__link">Контакты</a>
+                  <a href="contacts.html" class="main-nav__link">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -63,21 +63,21 @@
                 <picture>
                   <source media="(min-width: 1200px)" srcset="img/image-1-desktop@1x.jpg">
                   <source media="(min-width: 768px)" srcset="img/image-1-tablet@1x.jpg">
-                  <img src="img/image-1-mobile@1x.jpg" width="320" height="150">
+                  <img src="img/image-1-mobile@1x.jpg" width="320" height="150" alt="slide">
                 </picture>
               </div>
               <div class="swiper-slide  top-slider__slide">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="img/image-1-desktop@1x.jpg">
                   <source media="(min-width: 768px)" srcset="img/image-1-tablet@1x.jpg">
-                  <img src="img/image-1-mobile@1x.jpg" width="320" height="150">
+                  <img src="img/image-1-mobile@1x.jpg" width="320" height="150" alt="slide">
                 </picture>
               </div>
               <div class="swiper-slide  top-slider__slide">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="img/image-1-desktop@1x.jpg">
                   <source media="(min-width: 768px)" srcset="img/image-1-tablet@1x.jpg">
-                  <img src="img/image-1-mobile@1x.jpg" width="320" height="150">
+                  <img src="img/image-1-mobile@1x.jpg" width="320" height="150" alt="slide">
                 </picture>
               </div>
             </div>
@@ -90,7 +90,7 @@
         </div>
       </header>
       <main role="main">
-        <h1 class="visually-hidden">Бизнес-центр «Очаковский» приглашает</h1>
+        <h1 class="visually-hidden">Бизнес-центр «Очаковский»</h1>
         <article class="features">
           <div class="features__title-wrapper">
             <div class="container">
@@ -99,6 +99,14 @@
               </div>
             </div>
           </div>
+          <section class="container  features__header">
+            <div class="features__logo-wrapper">
+              <img src="img/ochakovski-big-logo.svg" width="280" alt="логотип Очаковский бизнес-центр">
+            </div>
+            <p class="features__intro">
+              IQ — бизнес-центр класса А+ в Печерском районе Киева, где уникальная архитектура и продуманное наполнение сочетаются с высокой технологичностью и эффективностью.
+            </p>
+          </section>
           <div class="container  features__container">
             <ul class="row  features__list">
               <li class="features__item  features__item--location"><span class="features__descr  features__descr--location">Удачное местоположение</span></li>
@@ -113,7 +121,7 @@
             </ul>
           </div>
         </article>
-        <article class="intro">
+        <!-- <article class="intro">
           <div class="container">
             <div class="intro__inner">
               <div class="intro__img-wrapper">
@@ -129,7 +137,7 @@
               </div>
             </div>
           </div>
-        </article>
+        </article> -->
         <article class="news">
           <div class="news__title-wrapper">
             <div class="container">
@@ -304,7 +312,7 @@
       </main>
       <div class="page__footer-wrapper">
         <footer class="page-footer" role="contentinfo">
-          <div class="page-footer__wrapper">
+          <div class="page-footer__inner">
             <article class="contacts">
               <h2 class="contacts__title">Свяжитесь с нами</h2>
               <div class="contacts__part-wrapper">
@@ -323,7 +331,7 @@
             </article>
             <article class="map">
               <div class="map__inner">
-                <iframe src="https://snazzymaps.com/embed/39867" width="100%" style="border:none;"></iframe>
+                <iframe src="https://snazzymaps.com/embed/39867" style="border:none;width:100%"></iframe>
               </div>
             </article>
           </div>
