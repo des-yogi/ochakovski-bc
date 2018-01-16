@@ -34,7 +34,8 @@
     "news-page": [],
     "current-news": [],
     "contacts-page": [],
-    "write-us": []
+    "write-us": [],
+    "about": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

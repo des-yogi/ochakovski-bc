@@ -3,6 +3,8 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .page-footer {
+  position: relative;
+  z-index: 10;
 
   @media (min-width: $screen-xl) {
     background: linear-gradient(to right, #545454, #545454 50%, #f4f4f4 50%, #f4f4f4);
@@ -19,6 +21,13 @@
       margin-right: auto;
       padding-left: 40px;
       padding-right: 40px;
+    }
+  }
+
+  &--contacts {
+
+    @media (min-width: $screen-xl) {
+      background: $bgr-dark;
     }
   }
 }

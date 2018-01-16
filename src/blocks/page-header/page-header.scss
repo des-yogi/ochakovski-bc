@@ -3,6 +3,7 @@
 
 .page-header {
   position: relative;
+  z-index: 10;
   overflow: hidden;
 
   $block-name:                &; // #{$block-name}__element
