@@ -10,7 +10,7 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  &__wrapper {
+  &__inner {
 
     @media (min-width: $screen-xl) {
       display: flex;

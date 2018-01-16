@@ -1,0 +1,111 @@
+// В этом файле должны быть стили для БЭМ-блока current-news, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.current-news {
+  padding-top: 20px;
+  padding-bottom: 60px;
+
+  .news__link {
+    width: 100%;
+    padding-bottom: 0;
+
+    .news__img-wrapper {
+    height: 320px;
+    overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      @media (min-width: $screen-md) {
+        width: 57%;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 54%;
+        height: 375px !important;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: initial;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    padding-top: 30px;
+    padding-bottom: 120px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__link-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+    svg {
+      transform: rotate(180deg);
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text-wrapper {
+    padding: 25px 15px;
+
+    h3,
+    p,
+    span {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    h3 {
+      @media (min-width: $screen-md) {
+        margin-top: 0;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-direction: column;
+      width: 43%;
+      padding: 30px;
+      margin-top: 60px;
+      background-color: $bgr-light;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 46%;
+      padding-top: 60px;
+    }
+  }
+
+  &__text-link {
+    display: inline-block;
+    padding-left: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: inherit;
+
+    @media (min-width: $screen-md) {
+      padding-left: 30px;
+      font-size: 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 26px;
+    }
+  }
+
+}
