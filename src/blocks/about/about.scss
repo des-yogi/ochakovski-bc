@@ -1,0 +1,153 @@
+// В этом файле должны быть стили для БЭМ-блока about, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.about {
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 120px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    padding: 25px 15px;
+    text-align: center;
+    background-color: $bgr-light;
+
+    &:last-child {
+      margin-top: 35px;
+    }
+
+    p {
+      text-align: inherit;
+    }
+  }
+
+  &__content {
+    margin-top: 35px;
+
+    @include row (
+      $xs-grid-gutter:  $grid-gutter-width * 2,
+      $sm-grid-gutter:  0,
+      $md-grid-gutter:  $grid-gutter-width * 4,
+      $lg-grid-gutter:  $grid-gutter-width * 4,
+      $xl-grid-gutter:  0
+    )
+  }
+
+  &__col {
+
+    @include col (
+      $screen:  xs,
+      $column:  12,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col (
+      $screen:  sm,
+      $column:  12,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+  }
+
+  &__item {
+    // margin-bottom: 35px;
+    text-align: left;
+    background: lightgray; // изменить на bgr-light;
+
+    @media (min-width: $screen-sm) {
+      width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      width: auto;
+      margin-left: 0;
+      margin-right: 0;
+      // margin-bottom: 0;
+      background: none;
+    }
+
+    &--right {
+      flex-direction: row-reverse;
+      text-align: right;
+      background: none;
+    }
+  }
+
+  &__img-wrapper {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (min-width: $screen-md) {
+
+      @include col (
+        $screen:  md,
+        $column:  5,
+        $columns: $grid-columns,
+        $gutter:  0
+      )
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+  }
+
+  &__text {
+    padding: 25px 20px;
+    text-align: inherit;
+
+    @include col (
+      $screen:  md,
+      $column:  7,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    p {
+      margin: 0;
+    }
+
+    p + p {
+      margin-top: 0.7rem;
+    }
+
+    @media (min-width: $screen-md) {
+      // max-height: 440px;
+      padding-top: 60px;
+      padding-left: 60px;
+      padding-right: 60px;
+      overflow: hidden;
+      background: lightgray; // изменить на bgr-light;
+    }
+
+    @media (min-width: $screen-xl) {
+      // max-height: 400px;
+      padding-top: 70px;
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+
+    &--right {
+      @media (min-width: $screen-md) {
+        background: none;
+      }
+    }
+  }
+
+}

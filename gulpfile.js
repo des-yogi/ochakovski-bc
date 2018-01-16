@@ -5,7 +5,7 @@ const fs = require('fs');
 const gulp = require('gulp');
 const gulpSequence = require('gulp-sequence');
 const browserSync = require('browser-sync').create();
-const realFavicon = require ('gulp-real-favicon');
+// const realFavicon = require ('gulp-real-favicon');
 
 const postcss = require('gulp-postcss');
 const autoprefixer = require("autoprefixer");
@@ -32,7 +32,7 @@ let lists = getFilesList(projectConfig);
 // console.log(lists);
 
 // файл с настройками фавиконок
-const faviconData = './faviconData.json';
+// const faviconData = './faviconData.json';
 
 // Формирование и запись диспетчера подключений (style.scss), который компилируется в style.min.css
 let styleImports = '/*!*\n * ВНИМАНИЕ! Этот файл генерируется автоматически.\n * Не пишите сюда ничего вручную, все такие правки будут потеряны.\n * Читайте ./README.md для понимания.\n */\n\n';
@@ -204,7 +204,7 @@ gulp.task('copy:fonts', function () {
 });
 
 // Генератор фавиконок
-gulp.task('favicons', function(done) {
+/*gulp.task('favicons', function(done) {
   realFavicon.generateFavicon({
     masterPicture: dirs.srcPath + '/img/favicon-lg.png',
     dest: dirs.buildPath + '/img',
@@ -263,17 +263,17 @@ gulp.task('favicons', function(done) {
   }, function() {
     done();
   });
-});
+});*/
 
 // Ручная проверка актуальности данных для favicon. Запускать перед стартом нового проекта.
-gulp.task('check:favicons:update', function(done) {
+/*gulp.task('check:favicons:update', function(done) {
   var currentVersion = JSON.parse(fs.readFileSync(faviconData)).version;
   realFavicon.checkForUpdates(currentVersion, function(err) {
     if (err) {
       throw err;
     }
   });
-});
+});*/
 
 // Сборка SVG-спрайта для блока sprite-svg
 let spriteSvgPath = dirs.srcPath + dirs.blocksDirName + '/sprite-svg/svg/';
@@ -382,7 +382,7 @@ gulp.task('html', function() {
       basepath: '@file',
       indent: true,
     }))
-    .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(faviconData)).favicon.html_code))
+    // .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(faviconData)).favicon.html_code))
     .pipe(replace(/\n\s*<!--DEV[\s\S]+?-->/gm, ''))
     .pipe(gulp.dest(dirs.buildPath));
 });
@@ -445,7 +445,7 @@ gulp.task('img:opt', function (callback) {
 gulp.task('build', function (callback) {
   gulpSequence(
     ['clean'],
-    ['sprite:svg', 'sprite:png', 'favicons'],
+    ['sprite:svg', 'sprite:png'],
     ['style', 'style:single', 'js', 'copy:css', 'copy:img', 'copy:js', 'copy:fonts'],
     'html',
     callback
