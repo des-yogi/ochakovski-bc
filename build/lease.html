@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Аренда офисов</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="MobileOptimized" content="320">
+  <meta name="format-detection" content="telephone=no">
+
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+  </script>
+
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header" role="banner">
+
+        <div class="page-header__top">
+
+          <div class="page-header__container">
+
+            <article class="logo">
+              <a href="/">
+                <img src="img/ochakovski-bc.svg" alt="Очаковский бизнес-центр" width="187" height="40">
+              </a>
+            </article>
+
+            <article class="user-nav">
+              <a href="" class="user-nav__link">
+                <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#login-icon"></use></svg>
+              </a>
+            </article>
+
+            <div class="burger">
+              <a id="burger" class="burger__link">Кнопка меню
+                <span class="burger__item"></span>
+              </a>
+            </div>
+
+            <nav class="main-nav">
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="news.html" class="main-nav__link">Новости</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="lease.html" class="main-nav__link">Аренда</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="services.html" class="main-nav__link">Сервисы</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="about.html" class="main-nav__link">О нас</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="contacts.html" class="main-nav__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
+        </div>
+
+        <div class="top-slider__wrapper">
+          <div id="top-slider" class="top-slider">
+            <div class="swiper-wrapper  top-slider__inner">
+              <div class="swiper-slide  top-slider__slide">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/image-1-desktop@1x.jpg">
+                  <source media="(min-width: 768px)" srcset="img/image-1-tablet@1x.jpg">
+                  <img src="img/image-1-mobile@1x.jpg" width="320" height="150" alt="slide"/>
+                </picture>
+              </div>
+              <div class="swiper-slide  top-slider__slide">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/image-1-desktop@1x.jpg">
+                  <source media="(min-width: 768px)" srcset="img/image-1-tablet@1x.jpg">
+                  <img src="img/image-1-mobile@1x.jpg" width="320" height="150" alt="slide"/>
+                </picture>
+              </div>
+              <div class="swiper-slide  top-slider__slide">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/image-1-desktop@1x.jpg">
+                  <source media="(min-width: 768px)" srcset="img/image-1-tablet@1x.jpg">
+                  <img src="img/image-1-mobile@1x.jpg" width="320" height="150" alt="slide"/>
+                </picture>
+              </div>
+            </div>
+          </div>
+
+          <div class="top-slider__controls">
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev  swiper-button-black"></div>
+            <div class="swiper-button-next  swiper-button-black"></div>
+          </div>
+
+        </div>
+
+      </header>
+
+
+      <main role="main">
+
+        <article class="lease">
+
+          <div class="container">
+            <div class="lease__header">
+              <h1 class="lease__title">Бизнес-центр “Очаковский”</h1>
+              <p class="lease__para">
+                Бизнес-центр «Очаквоский» расположен в Соломенском районе города Киева на пути пересечения основных магистралей — это изумительной красоты деловой комплекс, который хорошо проглядывается с Пушкинской площади.
+              </p>
+            </div>
+          </div>
+
+          <div class="lease__content">
+
+            <section class="lease__inner">
+
+              <div class="lease__text-wrapper">
+
+                <h2 class="lease__subtitle">Экстерьер Бизнес-центра</h2>
+                <p class="lease__para">
+                  Бизнес-центр «Галерея Актер» - это изумительной красоты деловой комплекс, который хорошо проглядывается с Пушкинской площади. Аккуратная башенная система объединяет в одно здание два девятиэтажных строения. Архитектурная пышность делового комплекса дополняется небольшими балконами, витражами и мансардами.
+                </p>
+
+              </div>
+
+              <section class="lease__form-wrapper">
+
+                <h2 class="lease__subtitle  lease__subtitle--form">Отправить заявку</h2>
+
+                <form class="form  lease__form" action="" method="" name="lease-form">
+
+                  <div class="lease__input-wrapper">
+                    <input type="text" name="name" placeholder="Ваше имя">
+                    <span class="error-message  error-message--lease"></span>
+                  </div>
+
+                  <div class="lease__input-wrapper">
+                    <input type="tel" name="tel" placeholder="Ваш телефон">
+                    <span class="error-message  error-message--lease"></span>
+                  </div>
+
+                  <div class="lease__input-wrapper">
+                    <button class="btn-submit" type="submit">Отправить</button>
+                  </div>
+
+                </form>
+
+              </section>
+
+            </section>
+
+          </div>
+
+        </article>
+
+      </main>
+
+      <div class="page__footer-wrapper">
+        <footer class="page-footer" role="contentinfo">
+
+          <div class="page-footer__inner">
+
+            <article class="contacts">
+              <h2 class="contacts__title">Свяжитесь с нами</h2>
+              <div class="contacts__part-wrapper">
+                <address class="contacts__item contacts__item--address">Адрес: <span>Очаківський, 5/6, 317, Київ, 03151</span></address>
+                <div class="contacts__item  contacts__item--work-time">Режим работы: <span> Круглосуточно</span>
+                </div>
+              </div>
+              <div class="contacts__part-wrapper">
+                <div class="contacts__item  contacts__item--tel">Телефон:
+                  <a href="tel:+380442275067" class="contacts__tel">+38 044 227 5067</a>
+                </div>
+                <div class="contacts__item  contacts__item--email">E-mail:
+                  <a href="mailto:ochavskiy@gmail.com" class="contacts__work-time">ochavskiy@gmail.com</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="map">
+              <div class="map__inner">
+                <iframe src="https://snazzymaps.com/embed/39867" style="border:none;width:100%"></iframe>
+              </div>
+            </article>
+
+          </div>
+
+          <article class="copyrights">
+            <div class="container  copyrights__wrapper">
+              <span class="copyrights__text">©&thinsp;2017. Бизнес-центр «Очаковский». All Rights Reserved.</span>
+              <a href="http://it-doors.com/" class="copyrights__logo" target="_blank" rel="nofollow" title="Разработчик сайта">
+                <svg width="90" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#it-doors-logo"></use></svg>
+              </a>
+              </div>
+          </article>
+
+        </footer>
+
+      </div>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+</html>

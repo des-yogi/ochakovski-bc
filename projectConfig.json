@@ -35,7 +35,8 @@
     "current-news": [],
     "contacts-page": [],
     "write-us": [],
-    "about": []
+    "about": [],
+    "lease": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
