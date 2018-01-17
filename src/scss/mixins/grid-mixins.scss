@@ -7,8 +7,8 @@ $screen-xl:                   1200px !default;
 
 $container-sm:                100% !default;
 $container-md:                100% !default;
-$container-lg:                ($screen-lg - 40) !default;
-$container-xl:                ($screen-xl - 40) !default;
+$container-lg:                100% !default;
+$container-xl:                $screen-xl !default;
 // $container-xxl:               ($screen-xxl - 20) !default;
 
 $grid-columns:                12 !default;

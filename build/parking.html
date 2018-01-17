@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Аренда офисов</title>
+  <title>Услуги: Парковка</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="MobileOptimized" content="320">
@@ -59,7 +59,7 @@
                   <a href="lease.html" class="main-nav__link">Аренда</a>
                 </li>
                 <li class="main-nav__item">
-                  <a href="parking.html" class="main-nav__link">Сервисы</a>
+                  <a href="services.html" class="main-nav__link">Сервисы</a>
                 </li>
                 <li class="main-nav__item">
                   <a href="about.html" class="main-nav__link">О нас</a>
@@ -73,97 +73,90 @@
           </div>
         </div>
 
-        <div class="top-slider__wrapper">
-          <div id="top-slider" class="top-slider">
-            <div class="swiper-wrapper  top-slider__inner">
-              <div class="swiper-slide  top-slider__slide">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/image-1-desktop@1x.jpg">
-                  <source media="(min-width: 768px)" srcset="img/image-1-tablet@1x.jpg">
-                  <img src="img/image-1-mobile@1x.jpg" width="320" height="150" alt="slide"/>
-                </picture>
-              </div>
-              <div class="swiper-slide  top-slider__slide">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/image-1-desktop@1x.jpg">
-                  <source media="(min-width: 768px)" srcset="img/image-1-tablet@1x.jpg">
-                  <img src="img/image-1-mobile@1x.jpg" width="320" height="150" alt="slide"/>
-                </picture>
-              </div>
-              <div class="swiper-slide  top-slider__slide">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/image-1-desktop@1x.jpg">
-                  <source media="(min-width: 768px)" srcset="img/image-1-tablet@1x.jpg">
-                  <img src="img/image-1-mobile@1x.jpg" width="320" height="150" alt="slide"/>
-                </picture>
-              </div>
-            </div>
-          </div>
-
-          <div class="top-slider__controls">
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev  swiper-button-black"></div>
-            <div class="swiper-button-next  swiper-button-black"></div>
-          </div>
-
-        </div>
-
       </header>
-
 
       <main role="main">
 
-        <article class="lease">
+        <article class="service-item">
+
+          <section class="service-menu">
+            <div class="container">
+
+              <div class="service-menu__inner">
+
+                <a class="service-menu__btn-link  service-menu__btn-link--prev" href="">Предыдущий пункт меню
+                  <svg width="9" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#next-icon"></use></svg>
+                </a>
+
+                <ul class="service-menu__list" role="navigation">
+                  <li class="service-menu__item  service-menu__item--parking" id="parking">
+                    <a class="service-menu__link  service-menu__link--parking  active" href="">Парковка</a>
+                  </li>
+                  <li class="service-menu__item  service-menu__item--carwash" id="carwash">
+                    <a class="service-menu__link  service-menu__link--carwash" href="">Автомойка</a>
+                  </li>
+                  <li class="service-menu__item  service-menu__item--restaurant" id="restaurant">
+                    <a class="service-menu__link  service-menu__link--restaurant" href="">Ресторан</a>
+                  </li>
+                </ul>
+
+                <a class="service-menu__btn-link  service-menu__btn-link--next" href="">Следующий пункт меню
+                  <svg width="9" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#next-icon"></use></svg>
+                </a>
+
+              </div>
+
+            </div>
+          </section>
 
           <div class="container">
-            <div class="lease__header">
-              <h1 class="lease__title">Бизнес-центр “Очаковский”</h1>
-              <p class="lease__para">
-                Бизнес-центр «Очаквоский» расположен в Соломенском районе города Киева на пути пересечения основных магистралей — это изумительной красоты деловой комплекс, который хорошо проглядывается с Пушкинской площади.
+            <div class="service-item__header">
+              <h1 class="service-item__title">Парковка Бизнес-центра</h1>
+              <p class="service-item__para">
+                Бизнес-центр «Очаковский» расположен в Соломенском районе города Киева на пути пересечения основных магистралей — это изумительной красоты деловой комплекс, который хорошо проглядывается с Пушкинской площади.
               </p>
             </div>
           </div>
 
-          <div class="lease__content">
+          <div class="service-item__scheme-wrapper">
 
-            <section class="lease__inner">
-
-              <div class="lease__text-wrapper">
-
-                <h2 class="lease__subtitle">Экстерьер Бизнес-центра</h2>
-                <p class="lease__para">
-                  Бизнес-центр «Галерея Актер» - это изумительной красоты деловой комплекс, который хорошо проглядывается с Пушкинской площади. Аккуратная башенная система объединяет в одно здание два девятиэтажных строения. Архитектурная пышность делового комплекса дополняется небольшими балконами, витражами и мансардами.
-                </p>
+            <figure class="service-item__parking-scheme">
+              <figcaption><h2>План парковки</h2><span>Выберите свободное место</span></figcaption>
+              <div class="service-item__scheme">
 
               </div>
-
-              <section class="lease__form-wrapper">
-
-                <h2 class="lease__subtitle  lease__subtitle--form">Отправить заявку</h2>
-
-                <form class="form  lease__form" action="" method="" name="lease-form">
-
-                  <div class="lease__input-wrapper">
-                    <input type="text" name="name" placeholder="Ваше имя">
-                    <span class="error-message  error-message--lease"></span>
-                  </div>
-
-                  <div class="lease__input-wrapper">
-                    <input type="tel" name="tel" placeholder="Ваш телефон">
-                    <span class="error-message  error-message--lease"></span>
-                  </div>
-
-                  <div class="lease__input-wrapper">
-                    <button class="btn-submit" type="submit">Отправить</button>
-                  </div>
-
-                </form>
-
-              </section>
-
-            </section>
+            </figure>
 
           </div>
+
+          <article class="info-block">
+            <div class="container">
+              <div class="info-block__header">
+                <h2 class="info-block__title">Экстерьер бизнес-центра</h2>
+                <p class="info-block__para">
+                  Бизнес-центр «Очаковский» расположен в Соломенском районе города Киева на пути пересечения основных магистралей — это изумительной красоты деловой комплекс, который хорошо проглядывается с Пушкинской площади.
+                </p>
+              </div>
+            </div>
+
+            <div class="info-block__inner">
+              <div class="info-block__img-wrapper">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/info-block-01-desktop@1x.jpg">
+                  <source media="(min-width: 768px)" srcset="img/info-block-01-tablet@1x.jpg">
+                  <img src="img/info-block-01-mobile@1x.jpg" alt="parking" width="320" height="190">
+                </picture>
+              </div>
+              <div class="info-block__img-wrapper">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/info-block-02-desktop@1x.jpg">
+                  <source media="(min-width: 768px)" srcset="img/info-block-02-tablet@1x.jpg">
+                  <img src="img/info-block-02-mobile@1x.jpg" alt="parking" width="320" height="190">
+                </picture>
+              </div>
+            </div>
+
+          </article>
 
         </article>
 

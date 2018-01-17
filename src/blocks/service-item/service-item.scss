@@ -1,0 +1,79 @@
+// В этом файле должны быть стили для БЭМ-блока service-item, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.service-item {
+  padding-top: 35px;
+  padding-bottom: 60px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    margin-bottom: 35px;
+    padding: 25px 15px;
+    text-align: center;
+    background-color: $bgr-light;
+
+    p {
+      text-align: inherit;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 60px;
+      padding: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+
+  &__scheme-wrapper {
+    margin-bottom: 35px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: $bgr-light;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 60px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  &__parking-scheme {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    span {
+      display: block;
+      font-size: 18px;
+    }
+  }
+
+  &__scheme {
+    min-height: 440px;
+    margin-top: 25px;
+    background-color: lightgray;
+
+    @media (min-width: $screen-md) {
+      margin-top: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+}

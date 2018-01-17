@@ -1,0 +1,71 @@
+// В этом файле должны быть стили для БЭМ-блока info-block, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.info-block {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    margin-bottom: 35px;
+    padding: 25px 15px;
+    text-align: center;
+    background-color: $bgr-light;
+
+    p {
+      text-align: inherit;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 60px;
+      padding: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+
+  &__inner {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: $screen-xl;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__img-wrapper {
+    width: auto;
+    height: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      overflow: hidden;
+    }
+
+    @media (min-width: $screen-sm) {
+      width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-md) {
+      width: calc(50% - 10px);
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+}
