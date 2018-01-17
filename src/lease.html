@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Аренда офисов</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main role="main">
+
+        <article class="lease">
+
+          <div class="container">
+            <div class="lease__header">
+              <h1 class="lease__title">Бизнес-центр “Очаковский”</h1>
+              <p class="lease__para">
+                Бизнес-центр «Очаквоский» расположен в Соломенском районе города Киева на пути пересечения основных магистралей — это изумительной красоты деловой комплекс, который хорошо проглядывается с Пушкинской площади.
+              </p>
+            </div>
+          </div>
+
+          <div class="lease__content">
+
+            <section class="lease__inner">
+
+              <div class="lease__text-wrapper">
+
+                <h2 class="lease__subtitle">Экстерьер Бизнес-центра</h2>
+                <p class="lease__para">
+                  Бизнес-центр «Галерея Актер» - это изумительной красоты деловой комплекс, который хорошо проглядывается с Пушкинской площади. Аккуратная башенная система объединяет в одно здание два девятиэтажных строения. Архитектурная пышность делового комплекса дополняется небольшими балконами, витражами и мансардами.
+                </p>
+
+              </div>
+
+              <section class="lease__form-wrapper">
+
+                <h2 class="lease__subtitle  lease__subtitle--form">Отправить заявку</h2>
+
+                <form class="form  lease__form" action="" method="" name="lease-form">
+
+                  <div class="lease__input-wrapper">
+                    <input type="text" name="name" placeholder="Ваше имя">
+                    <span class="error-message  error-message--lease"></span>
+                  </div>
+
+                  <div class="lease__input-wrapper">
+                    <input type="tel" name="tel" placeholder="Ваш телефон">
+                    <span class="error-message  error-message--lease"></span>
+                  </div>
+
+                  <div class="lease__input-wrapper">
+                    <button class="btn-submit" type="submit">Отправить</button>
+                  </div>
+
+                </form>
+
+              </section>
+
+            </section>
+
+          </div>
+
+        </article>
+
+      </main>
+
+      <div class="page__footer-wrapper">
+        @@include('blocks/page-footer/page-footer.html')
+      </div>
+
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

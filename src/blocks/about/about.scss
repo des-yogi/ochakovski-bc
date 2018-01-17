@@ -1,6 +1,5 @@
 // В этом файле должны быть стили для БЭМ-блока about, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .about {
   padding-top: 30px;
@@ -58,7 +57,7 @@
   &__item {
     // margin-bottom: 35px;
     text-align: left;
-    background: lightgray; // изменить на bgr-light;
+    background: $bgr-light;
 
     @media (min-width: $screen-sm) {
       width: 440px;
@@ -130,15 +129,16 @@
     @media (min-width: $screen-md) {
       // max-height: 440px;
       padding-top: 60px;
+      padding-bottom: 40px;
       padding-left: 60px;
       padding-right: 60px;
       overflow: hidden;
-      background: lightgray; // изменить на bgr-light;
+      background: $bgr-light;
     }
 
     @media (min-width: $screen-xl) {
-      // max-height: 400px;
       padding-top: 70px;
+      padding-bottom: 50px;
       padding-left: 120px;
       padding-right: 120px;
     }
