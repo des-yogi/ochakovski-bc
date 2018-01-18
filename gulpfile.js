@@ -289,7 +289,7 @@ gulp.task('sprite:svg', function (callback) {
           return {
             plugins: [{
               cleanupIDs: {
-                minify: true
+                minify: false
               }
             }]
           }

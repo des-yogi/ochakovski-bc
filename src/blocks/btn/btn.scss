@@ -124,8 +124,6 @@
       }
     }
   }
-
-
 }
 
 .btn-submit {
@@ -152,7 +150,31 @@
     background: $white !important;
   }
 
+  &--disabled,
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    color: $text-muted;
+    pointer-events: none;
+
+    @at-root a.btn--disabled {
+      pointer-events: none;
+    }
+  }
+
   @media (min-width: $screen-md) {
     margin-left: 0;
+  }
+
+  &--invert-color {
+    color: $title-color;
+    background: none;
+    border-color: $bgr-dark;
+
+    &:hover,
+    &:active {
+      color: $white !important;
+      background: $bgr-dark !important;
+    }
   }
 }
