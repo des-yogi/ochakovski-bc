@@ -1,6 +1,5 @@
 // В этом файле должны быть стили для БЭМ-блока car-wash, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .car-wash {
 
@@ -111,14 +110,28 @@
 
   &__price-form {
 
+  }
+
+  &__price-help {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+  }
+
+  &__input-wrapper {
+    background: $white;
+    border-right: 2px solid $bgr-dark;
+
     label {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 10px 10px;
+    padding: 10px 15px;
     font-size: 14px;
     font-weight: 500;
-    // color: inherit;
     cursor: pointer;
 
       &:hover,
@@ -127,19 +140,33 @@
         background: $bgr-dark;
       }
     }
+
+    input:disabled + label {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    &:nth-child(odd) {
+      background: $bgr-light;
+      border-right: none;
+      border-left: 2px solid $bgr-dark;
+    }
   }
 
   &__price-label {
-
   }
 
   &__value {
     font-weight: 600;
   }
 
-  input[id=wash-01]:checked + input[for=wash-01] {
-    color: $white !important;
-    background: $bgr-dark !important;
+  #price-item-1:checked + label[for=price-item-1],
+  #price-item-2:checked + label[for=price-item-2],
+  #price-item-3:checked + label[for=price-item-3],
+  #price-item-4:checked + label[for=price-item-4]
+  {
+    color: $white;
+    background: $bgr-dark;
   }
 
 }
