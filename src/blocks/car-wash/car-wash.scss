@@ -1,0 +1,145 @@
+// В этом файле должны быть стили для БЭМ-блока car-wash, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.car-wash {
+
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__menu-wrapper {
+    background: $bgr-light;
+
+    @media (min-width: $screen-md) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  &__menu {
+    margin-bottom: 35px;
+  }
+
+  &__menu-list {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    list-style-type: none;
+
+    @media (min-width: $screen-md) {
+      justify-content: center;
+    }
+  }
+
+  &__menu-item {
+    width: auto !important;
+    // padding-left: 30px;
+    // padding-right: 30px;
+
+    @media (min-width: $screen-md) {
+
+      &:last-child {
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  &__menu-link {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-muted;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &.active {
+      color: $title-color;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: $bgr-dark;
+      }
+    }
+  }
+
+  &__order-form {
+    // display: block !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  &__info {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 25px;
+  }
+
+  &__info-text {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 16px;
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      font-size: 18px;
+    }
+  }
+
+  &__btn-wrapper {
+    display: block;
+
+    button {
+      margin: auto;
+    }
+  }
+
+  &__price {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__price-form {
+
+    label {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    // color: inherit;
+    cursor: pointer;
+
+      &:hover,
+      &:active {
+        color: $white;
+        background: $bgr-dark;
+      }
+    }
+  }
+
+  &__price-label {
+
+  }
+
+  &__value {
+    font-weight: 600;
+  }
+
+  input[id=wash-01]:checked + input[for=wash-01] {
+    color: $white !important;
+    background: $bgr-dark !important;
+  }
+
+}

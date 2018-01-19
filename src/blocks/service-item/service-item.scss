@@ -1,0 +1,273 @@
+// В этом файле должны быть стили для БЭМ-блока service-item, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.service-item {
+  padding-top: 35px;
+  padding-bottom: 60px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    margin-bottom: 35px;
+    padding: 25px 15px;
+    text-align: center;
+    background-color: $bgr-light;
+
+    p {
+      text-align: inherit;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 60px;
+      padding: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+
+  &__scheme-wrapper {
+    margin-bottom: 35px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: $bgr-light;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 60px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 1120px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__parking-scheme {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    span {
+      display: block;
+      font-size: 18px;
+    }
+  }
+
+  &__scheme {
+    min-height: 200px;
+    margin-top: 25px;
+    overflow: hidden;
+    // background-color: lightgray;
+
+    @media (min-width: $screen-md) {
+      margin-top: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  &__scheme-img {
+    max-width: 100%;
+    fill: red !important;
+
+    svg {
+      fill: inherit;
+    }
+  }
+
+  &__order-form {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 1120px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+    }
+  }
+
+  &__form {
+    padding: 25px 20px;
+    color: $white;
+    background-color: $bgr-dark;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-direction: column;
+      padding: 0;
+      background: none;
+    }
+  }
+
+  &__input-container {
+
+    @media (min-width: $screen-md) {
+      width: 320px;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      padding-top: 30px;
+      padding-left: 25px;
+      padding-right: 25px;
+      background-color: $bgr-dark;
+    }
+  }
+
+  &__input-wrapper {
+    width: 100%;
+
+    input {
+      width: 100%;
+      font-size: 16px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 320px;
+    }
+
+    &--place {
+      height: 44px;
+      background-color: $white;
+      border-radius: 3px;
+    }
+
+    &--button {
+      padding-top: 25px;
+      margin-bottom: 35px;
+
+      button {
+
+        @media (min-width: $screen-md) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        @media (min-width: $screen-xl) {
+          // margin-left: auto;
+          // margin-right: auto;
+        }
+      }
+
+      @media (min-width: $screen-md) {
+        padding-top: 30px;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__place {
+    display: block;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: $text-color;
+
+    &--timepicker {
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+      padding: 0 15px;
+      max-width: 100%;
+      max-height: 44px;
+      overflow: hidden;
+
+      label {
+        padding-right: 25px;
+        font-weight: 500;
+      }
+
+      & .timepicker {
+        position: static;
+        width: auto !important;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: left;
+        border: none;
+      }
+    }
+
+  }
+
+  &__place-num {
+    display: inline-block;
+    padding-left: 10px;
+    font-weight: 600;
+  }
+
+  &__contacts {
+    margin-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    color: $white;
+
+    span {
+      display: block;
+    }
+
+    @media (min-width: $screen-md) {
+      margin: auto;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      margin-top: 30px;
+      color: $text-color;
+
+      & > * {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__contacts-text {
+    margin-bottom: 15px;
+  }
+
+  &__tel-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+}

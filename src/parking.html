@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Услуги: Парковка</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header" role="banner">
+
+        <div class="page-header__top">
+
+          <div class="page-header__container">
+
+            <article class="logo">
+              <a href="/">
+                <img src="img/ochakovski-bc.svg" alt="Очаковский бизнес-центр" width="187" height="40">
+              </a>
+            </article>
+
+            <article class="user-nav" role="navigation">
+              <a href="" class="user-nav__link">
+                <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#login-icon"></use></svg>
+              </a>
+            </article>
+
+            <div class="burger">
+              <a id="burger" class="burger__link">Кнопка меню
+                <span class="burger__item"></span>
+              </a>
+            </div>
+
+            <nav class="main-nav" role="navigation">
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="news.html" class="main-nav__link">Новости</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="lease.html" class="main-nav__link">Аренда</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="parking.html" class="main-nav__link">Сервисы</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="about.html" class="main-nav__link">О нас</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="contacts.html" class="main-nav__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
+        </div>
+
+      </header>
+
+      <main role="main">
+
+        <article class="service-item">
+
+          <section class="service-menu">
+            <div class="container">
+
+              <div class="service-menu__inner">
+
+                <a class="service-menu__btn-link  service-menu__btn-link--prev" href="">Предыдущий пункт меню
+                  <svg width="9" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#next-icon"></use></svg>
+                </a>
+
+                <ul class="service-menu__list" role="navigation">
+                  <li class="service-menu__item  service-menu__item--parking" id="parking">
+                    <a class="service-menu__link  service-menu__link--parking  active" href="parking.html">Парковка</a>
+                  </li>
+                  <li class="service-menu__item  service-menu__item--carwash" id="carwash">
+                    <a class="service-menu__link  service-menu__link--carwash" href="carwash.html">Автомойка</a>
+                  </li>
+                  <li class="service-menu__item  service-menu__item--restaurant" id="restaurant">
+                    <a class="service-menu__link  service-menu__link--restaurant" href="">Ресторан</a>
+                  </li>
+                </ul>
+
+                <a class="service-menu__btn-link  service-menu__btn-link--next" href="">Следующий пункт меню
+                  <svg width="9" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#next-icon"></use></svg>
+                </a>
+
+              </div>
+
+            </div>
+          </section>
+
+          <div class="container">
+            <div class="service-item__header">
+              <h1 class="service-item__title">Парковка Бизнес-центра</h1>
+              <p class="service-item__para">
+                Бизнес-центр «Очаковский» расположен в Соломенском районе города Киева на пути пересечения основных магистралей — это изумительной красоты деловой комплекс, который хорошо проглядывается с Пушкинской площади.
+              </p>
+            </div>
+          </div>
+
+          <section class="service-item__order-form">
+
+            <form id="place-order-form" class="form  service-item__form" action="" method="">
+              <div class="service-item__input-container">
+                <div class="service-item__input-wrapper">
+                  <input type="text" name="name" placeholder="Ваше имя">
+                  <span class="error-message"></span>
+                </div>
+                <div class="service-item__input-wrapper">
+                  <input type="tel" name="tel" placeholder="Ваш телефон">
+                  <span class="error-message"></span>
+                </div>
+                <div class="service-item__input-wrapper  service-item__input-wrapper--place">
+                  <span class="service-item__place">Ваше место:<span class="service-item__place-num">39</span></span>
+                </div>
+              </div>
+              <div class="service-item__contacts">
+                <span class="service-item__contacts-text">Или свяжитесь с нами:</span>
+                <a href="tel:+380442275067" class="service-item__tel-link">+38 044 227 5067</a>
+                <span class="service-item__worktime">ПН&thinsp;–&thinsp;ВС:&emsp;9.00&thinsp;–&thinsp;10.00</span>
+              </div>
+            </form>
+            <div class="service-item__input-wrapper  service-item__input-wrapper--button">
+              <button class="btn-submit  btn-submit--invert-color" form="place-order-form" type="submit">Отправить</button>
+            </div>
+
+          </section>
+
+          <div class="service-item__scheme-wrapper">
+
+            <figure class="service-item__parking-scheme">
+              <figcaption><h2>План парковки</h2><span>Выберите свободное место</span></figcaption>
+              <div class="service-item__scheme">
+                <object id="parking-svg" type="image/svg+xml" data="img/parking-scheme.svg" class="service-item__scheme-img">
+                  <!-- запасное изображение <img src="img/parking-scheme.svg"> -->
+                </object>
+              </div>
+            </figure>
+
+          </div>
+
+          <article class="info-block">
+            <div class="container">
+              <div class="info-block__header">
+                <h2 class="info-block__title">Экстерьер бизнес-центра</h2>
+                <p class="info-block__para">
+                  Бизнес-центр «Очаковский» расположен в Соломенском районе города Киева на пути пересечения основных магистралей — это изумительной красоты деловой комплекс, который хорошо проглядывается с Пушкинской площади.
+                </p>
+              </div>
+            </div>
+
+            <div class="info-block__inner">
+              <div class="info-block__img-wrapper">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/info-block-01-desktop@1x.jpg">
+                  <source media="(min-width: 768px)" srcset="img/info-block-01-tablet@1x.jpg">
+                  <img src="img/info-block-01-mobile@1x.jpg" alt="parking" width="320" height="190">
+                </picture>
+              </div>
+              <div class="info-block__img-wrapper">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/info-block-02-desktop@1x.jpg">
+                  <source media="(min-width: 768px)" srcset="img/info-block-02-tablet@1x.jpg">
+                  <img src="img/info-block-02-mobile@1x.jpg" alt="parking" width="320" height="190">
+                </picture>
+              </div>
+            </div>
+
+          </article>
+
+        </article>
+
+      </main>
+
+      <div class="page__footer-wrapper">
+        @@include('blocks/page-footer/page-footer.html')
+      </div>
+
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

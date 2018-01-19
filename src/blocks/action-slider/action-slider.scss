@@ -1,0 +1,93 @@
+// В этом файле должны быть стили для БЭМ-блока action-slider, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.action-slider {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    // padding-left: 20px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 1120px;
+      padding: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__slides {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 35px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    height: auto !important;
+    background: $bgr-light;
+    overflow: hidden;
+  }
+
+  &__img-wrapper {
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    p {
+      margin: 0;
+
+      &:last-of-type {
+        margin-bottom: 15px;
+      }
+    }
+
+    p + p {
+      margin-top: 0.7rem;
+    }
+
+    @media (min-width: $screen-md) {
+      padding-top: 30px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &__slide-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  &__date {
+    margin-top: auto;
+  }
+
+}

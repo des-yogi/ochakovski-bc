@@ -36,7 +36,14 @@
     "contacts-page": [],
     "write-us": [],
     "about": [],
-    "lease": []
+    "lease": [],
+    "service-menu": [],
+    "parking": [],
+    "car-wash": [],
+    "action-slider": [],
+    "info-block": [],
+    "service-item": [],
+    "timepicker": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
