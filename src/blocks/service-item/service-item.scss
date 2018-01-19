@@ -95,6 +95,7 @@
   }
 
   &__order-form {
+    display: none;
 
     @media (min-width: $screen-md) {
       padding-left: 40px;
@@ -196,6 +197,31 @@
     padding: 10px 15px;
     font-size: 18px;
     color: $text-color;
+
+    &--timepicker {
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+      padding: 0 15px;
+      max-width: 100%;
+      max-height: 44px;
+      overflow: hidden;
+
+      label {
+        padding-right: 25px;
+        font-weight: 500;
+      }
+
+      & .timepicker {
+        position: static;
+        width: auto !important;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: left;
+        border: none;
+      }
+    }
+
   }
 
   &__place-num {

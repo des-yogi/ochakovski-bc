@@ -72,6 +72,55 @@ $(document).ready(function ($) {
     }
   });
 
+  var actionSwiper = new Swiper('.action-slider', {
+    speed: 400,
+    spaceBetween: 20,
+    slidesPerView: 3,
+    // centeredSlides: true,
+    roundLengths: true,
+    effect: 'slide',
+    grabCursor: true,
+    loop: true,
+    breakpoints: {
+      767: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        centeredSlides: true
+      },
+      1199: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        centeredSlides: false
+      }
+    }
+  });
+
+  var carwashMenuSwiper = new Swiper('.car-wash__menu', {
+    speed: 400,
+    spaceBetween: 120,
+    slidesPerView: 4,
+    centeredSlides: false,
+    roundLengths: true,
+    effect: 'slide',
+    grabCursor: false,
+    // loop: true,
+    breakpoints: {
+      767: {
+        slidesPerView: 'auto',
+        spaceBetween: 60,
+        centeredSlides: true
+      },
+      1199: {
+        slidesPerView: 4,
+        spaceBetween: 60,
+        centeredSlides: false
+      }
+    }
+  });
+
+
+  $('.timepicker').timepicker();
+
 });
 
 (function(){
@@ -89,30 +138,61 @@ $(document).ready(function ($) {
     }
   }*/
 
+
+  function selectPlace (elem) {
+    var orderForm = document.querySelector('.service-item__order-form');
+    elem.setAttribute('pointer-events', 'auto');
+    elem.style.fill = '#303030';
+    orderForm.style.display= 'block';
+    //elem.setAttribute('fill', '#303030');
+  };
+
   function findSVGElements (e) {
+
+    if (!document.querySelector("#parking-svg")) {
+      return;
+    }
 
     var svg = document.querySelector("#parking-svg").contentDocument;
     var placeBlock = svg.querySelector("#places");
     var item = placeBlock.children;
 
     [].forEach.call(item, function(elem) {
-      elem.setAttribute("fill", "#DBDBDB");
-      elem.setAttribute("cursor", "pointer");
+      elem.setAttribute('fill', '#DBDBDB');
+      elem.setAttribute('cursor', 'pointer');
+      // elem.setAttribute('pointer-events', 'none');
 
       elem.addEventListener('click', function (e) {
-        elem.setAttribute("fill", "#303030");
+        selectPlace (this);
       });
 
-      item['10'].setAttribute("fill", "#93E376");
-      item['41'].setAttribute("fill", "#93E376");
-      item['36'].setAttribute("fill", "#93E376");
-      item['37'].setAttribute("fill", "#93E376");
-      item['1'].setAttribute("fill", "#93E376");
+      item['10'].setAttribute('fill', '#93E376');
+      item['41'].setAttribute('fill', '#93E376');
+      item['36'].setAttribute('fill', '#93E376');
+      item['37'].setAttribute('fill', '#93E376');
+      item['1'].setAttribute('fill', '#93E376');
+
+      if (item['place-14']) item['place-14'].setAttribute('fill', 'red');
+
     });
 
   }
 
   window.addEventListener("load", findSVGElements, false);
+
+}());
+
+(function(){
+
+  var carwashChooseBtn = document.querySelector(".btn-submit--carwash");
+  var carwashOrderForm = document.querySelector(".car-wash__order-form");
+
+  function carwashChooseBtnHandler (e) {
+    carwashChooseBtn.style.display= 'none';
+    carwashOrderForm.style.display= 'block';
+  };
+
+  carwashChooseBtn.addEventListener('click', carwashChooseBtnHandler);
 
 }());
 

@@ -42,7 +42,8 @@
     "car-wash": [],
     "action-slider": [],
     "info-block": [],
-    "service-item": []
+    "service-item": [],
+    "timepicker": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

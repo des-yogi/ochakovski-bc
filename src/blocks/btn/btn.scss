@@ -177,4 +177,17 @@
       background: $bgr-dark !important;
     }
   }
+
+  &--carwash {
+    color: $white;
+    background: $bgr-dark;
+    border-color: $bgr-dark;
+
+    &:hover,
+    &:active {
+      color: $bgr-dark !important;
+      background: $white !important;
+      border-color: $bgr-dark;
+    }
+  }
 }
