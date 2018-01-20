@@ -118,6 +118,33 @@ $(document).ready(function ($) {
     }
   });
 
+  /*var serviceMenuSwiper = new Swiper('.service-menu__inner', {
+    speed: 400,
+    spaceBetween: 0,
+    slidesPerView: 3,
+    centeredSlides: false,
+    roundLengths: true,
+    effect: 'slide',
+    grabCursor: false,
+    // loop: true,
+    breakpoints: {
+      767: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        centeredSlides: true
+      },
+      1199: {
+        slidesPerView: 3,
+        spaceBetween: 0,
+        centeredSlides: true
+      }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });*/
+
 
   $('.timepicker').timepicker();
 
@@ -191,6 +218,10 @@ $(document).ready(function ($) {
     carwashChooseBtn.style.display= 'none';
     carwashOrderForm.style.display= 'block';
   };
+
+  if (!carwashChooseBtn) {
+    return;
+  }
 
   carwashChooseBtn.addEventListener('click', carwashChooseBtnHandler);
 

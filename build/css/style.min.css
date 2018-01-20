@@ -21,15 +21,15 @@ $font-size--small:            0.75em; */
  * @return {string} Результат преобразования $px в em на основе $font-size
  */
 /**
- * Swiper 4.0.7
+ * Swiper 4.1.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * http://www.idangero.us/swiper/
  *
- * Copyright 2014-2017 Vladimir Kharlampidi
+ * Copyright 2014-2018 Vladimir Kharlampidi
  *
  * Released under the MIT License
  *
- * Released on: November 28, 2017
+ * Released on: January 13, 2018
  */
 .swiper-container {
   margin: 0 auto;
@@ -224,6 +224,9 @@ $font-size--small:            0.75em; */
 .swiper-container-rtl .swiper-button-prev.swiper-button-black {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
 }
+.swiper-button-lock {
+  display: none;
+}
 .swiper-pagination {
   position: absolute;
   text-align: center;
@@ -409,6 +412,9 @@ button.swiper-pagination-bullet {
 .swiper-pagination-progressbar.swiper-pagination-black .swiper-pagination-progressbar-fill {
   background: #000000;
 }
+.swiper-pagination-lock {
+  display: none;
+}
 /* Scrollbar */
 .swiper-scrollbar {
   border-radius: 10px;
@@ -443,6 +449,9 @@ button.swiper-pagination-bullet {
 }
 .swiper-scrollbar-cursor-drag {
   cursor: move;
+}
+.swiper-scrollbar-lock {
+  display: none;
 }
 .swiper-zoom-container {
   width: 100%;
@@ -2321,26 +2330,49 @@ a.btn--disabled {
 .car-wash__price {
   padding-left: 20px;
   padding-right: 20px; }
-.car-wash__price-form label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  padding: 10px 10px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer; }
-.car-wash__price-form label:hover, .car-wash__price-form label:active {
-    color: white;
-    background: #303030; }
+.car-wash__price-help {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 14px; }
+.car-wash__input-wrapper {
+  background: white;
+  border-right: 2px solid #303030; }
+.car-wash__input-wrapper label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer; }
+.car-wash__input-wrapper label:hover, .car-wash__input-wrapper label:active {
+      color: white;
+      background: #303030; }
+.car-wash__input-wrapper input:disabled + label {
+    opacity: 0.3;
+    pointer-events: none; }
+.car-wash__input-wrapper:nth-child(odd) {
+    background: #f6f6f6;
+    border-right: none;
+    border-left: 2px solid #303030; }
 .car-wash__value {
   font-weight: 600; }
-.car-wash input[id=wash-01]:checked + input[for=wash-01] {
-  color: white !important;
-  background: #303030 !important; }
+.car-wash #price-item-1:checked + label[for=price-item-1],
+.car-wash #price-item-2:checked + label[for=price-item-2],
+.car-wash #price-item-3:checked + label[for=price-item-3],
+.car-wash #price-item-4:checked + label[for=price-item-4] {
+  color: white;
+  background: #303030; }
+.swiper-button-next,
+.swiper-button-prev {
+  background-image: none; }
 .action-slider__slides {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2645,8 +2677,7 @@ a.btn--disabled {
     .info-block__img-wrapper {
       width: 440px;
       margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 0; } }
+      margin-right: auto; } }
 @media (min-width: 768px) {
     .container {
       width: 100%;
@@ -3070,6 +3101,7 @@ a.btn--disabled {
             justify-content: space-between; }
     .info-block__img-wrapper {
       width: calc(50% - 10px);
+      margin-bottom: 0;
       margin-left: 0;
       margin-right: 0; }
     .service-item {
@@ -3369,7 +3401,7 @@ a.btn--disabled {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      width: 1100px;
+      width: 1120px;
       margin-left: auto;
       margin-right: auto; }
       .lease__text-wrapper {

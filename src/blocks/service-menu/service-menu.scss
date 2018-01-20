@@ -23,7 +23,7 @@
     margin: 0;
     list-style-type: none;
     text-decoration: none;
-    overflow: hidden;
+    overflow: hidden;  // откл. для swiper-slider
 
     @media (min-width: $screen-md) {
       justify-content: space-between;

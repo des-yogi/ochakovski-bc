@@ -196,37 +196,6 @@
               </section>
             </div>
 
-            <!-- <section class="service-item__order-form  car-wash__order-form"> -->
-
-              <!-- <form id="carwash-order-form" class="form  service-item__form  car-wash__form" action="" method="" name="carwash-order-form">
-                <div class="service-item__input-container">
-                  <div class="service-item__input-wrapper">
-                    <input type="text" name="name" placeholder="Ваше имя">
-                    <span class="error-message"></span>
-                  </div>
-                  <div class="service-item__input-wrapper">
-                    <input type="tel" name="tel" placeholder="Ваш телефон">
-                    <span class="error-message"></span>
-                  </div>
-                  <div class="service-item__input-wrapper  service-item__input-wrapper--place">
-                    <span class="service-item__place  service-item__place--timepicker">
-                      <label for="timepicker">Время:</label><input id="timepicker" class="timepicker" type="text" name="carwash-time">
-                    </span>
-                  </div>
-                </div>
-                <div class="service-item__contacts">
-                  <span class="service-item__contacts-text">Или свяжитесь с нами:</span>
-                  <a href="tel:+380442275067" class="service-item__tel-link">+38 044 227 5067</a>
-                  <span class="service-item__worktime">ПН&thinsp;–&thinsp;ВС:&emsp;9.00&thinsp;–&thinsp;10.00</span>
-                </div>
-              </form> -->
-
-              <!-- <div class="service-item__input-wrapper  service-item__input-wrapper--button">
-                <button class="btn-submit  btn-submit--invert-color" form="carwash-order-form" type="submit">Отправить</button>
-              </div> -->
-
-            <!-- </section> -->
-
             <div class="service-item__scheme-wrapper  car-wash__price-wrapper">
 
               <div class="car-wash__info">
@@ -270,12 +239,39 @@
 
               <article class="car-wash__price">
                 <form class="car-wash__price-form" action="" method="" name="carwash-price-form">
+                  <p class="car-wash__price-help">*&thinsp;Сделайте выбор, нажав на требуемый пункт в прайсе.</p>
 
-                  <label for="wash-01" class="car-wash__price-label">
-                    <span class="car-wash__service-name">Бесконтактная мойка</span>
-                    <span class="car-wash__value">80</span>
-                  </label>
-                  <input id="wash-01" type="checkbox" name="" value="80">
+                  <div class="car-wash__input-wrapper">
+                    <input id="price-item-1" type="checkbox" name="" value="80" hidden>
+                    <label for="price-item-1" class="car-wash__price-label">
+                      <span class="car-wash__service-name">Бесконтактная мойка</span>
+                      <span class="car-wash__value">80</span>
+                    </label>
+                  </div>
+
+                  <div class="car-wash__input-wrapper">
+                    <input id="price-item-2" type="checkbox" name="" value="80" hidden disabled>
+                    <label for="price-item-2" class="car-wash__price-label">
+                      <span class="car-wash__service-name">Ручная мойка (Нанопена)</span>
+                      <span class="car-wash__value">100</span>
+                    </label>
+                  </div>
+
+                  <div class="car-wash__input-wrapper">
+                    <input id="price-item-3" type="checkbox" name="" value="80" hidden>
+                    <label for="price-item-3" class="car-wash__price-label">
+                      <span class="car-wash__service-name">Экспресс мойка</span>
+                      <span class="car-wash__value">60</span>
+                    </label>
+                  </div>
+
+                  <div class="car-wash__input-wrapper">
+                    <input id="price-item-4" type="checkbox" name="" value="80" hidden>
+                    <label for="price-item-4" class="car-wash__price-label">
+                      <span class="car-wash__service-name">Сбивка водой</span>
+                      <span class="car-wash__value">40</span>
+                    </label>
+                  </div>
 
                 </form>
               </article>
