@@ -2370,6 +2370,9 @@ a.btn--disabled {
 .car-wash #price-item-4:checked + label[for=price-item-4] {
   color: white;
   background: #303030; }
+.swiper-button-next,
+.swiper-button-prev {
+  background-image: none; }
 .action-slider__slides {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3398,7 +3401,7 @@ a.btn--disabled {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      width: 1100px;
+      width: 1120px;
       margin-left: auto;
       margin-right: auto; }
       .lease__text-wrapper {
