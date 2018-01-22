@@ -21,15 +21,15 @@ $font-size--small:            0.75em; */
  * @return {string} Результат преобразования $px в em на основе $font-size
  */
 /**
- * Swiper 4.1.0
+ * Swiper 4.0.7
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * http://www.idangero.us/swiper/
  *
- * Copyright 2014-2018 Vladimir Kharlampidi
+ * Copyright 2014-2017 Vladimir Kharlampidi
  *
  * Released under the MIT License
  *
- * Released on: January 13, 2018
+ * Released on: November 28, 2017
  */
 .swiper-container {
   margin: 0 auto;
@@ -224,9 +224,6 @@ $font-size--small:            0.75em; */
 .swiper-container-rtl .swiper-button-prev.swiper-button-black {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
 }
-.swiper-button-lock {
-  display: none;
-}
 .swiper-pagination {
   position: absolute;
   text-align: center;
@@ -412,9 +409,6 @@ button.swiper-pagination-bullet {
 .swiper-pagination-progressbar.swiper-pagination-black .swiper-pagination-progressbar-fill {
   background: #000000;
 }
-.swiper-pagination-lock {
-  display: none;
-}
 /* Scrollbar */
 .swiper-scrollbar {
   border-radius: 10px;
@@ -449,9 +443,6 @@ button.swiper-pagination-bullet {
 }
 .swiper-scrollbar-cursor-drag {
   cursor: move;
-}
-.swiper-scrollbar-lock {
-  display: none;
 }
 .swiper-zoom-container {
   width: 100%;
@@ -885,6 +876,12 @@ blockquote {
   padding: 0;
   margin-left: 0;
   margin-right: 0; }
+.error-message {
+  display: block;
+  width: 100%;
+  height: 30px;
+  font-size: 12px;
+  color: inherit; }
 .page-header {
   position: relative;
   z-index: 10;
@@ -1259,7 +1256,7 @@ a.btn--disabled {
   display: none;
   overflow: hidden;
   position: fixed;
-  top: 0;
+  top: 65px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -1272,7 +1269,17 @@ a.btn--disabled {
     position: relative;
     margin: 0;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    /* @media (min-width: $screen-lg) {
+      width: 600px;
+      height: auto;
+      margin-top: 10px;
+      margin-right: 40px;
+
+      .modal--open & {
+        animation: modal-content-show $transition-time 1 both;
+      }
+    } */ }
 .modal__content {
     position: relative;
     display: -webkit-box;
@@ -1284,7 +1291,7 @@ a.btn--disabled {
             flex-direction: column;
     min-width: 100%;
     min-height: 100%;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
     outline: 0; }
 .modal__header {
     padding: 5px 40px 0 10px;
@@ -1302,7 +1309,7 @@ a.btn--disabled {
     top: 5px;
     right: 5px; }
 .modal__body {
-    padding: 0 10px;
+    padding: 30px 20px;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1; }
@@ -1312,12 +1319,69 @@ a.btn--disabled {
         flex-shrink: 0; }
 .modal__backdrop {
     position: fixed;
-    top: 0;
+    top: 65px;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.7); }
+.modal__login-form input[type=radio] {
+    display: none; }
+.modal__login-form #check-in:checked ~ .modal__input-wrapper label[for=check-in],
+  .modal__login-form #login:checked ~ .modal__input-wrapper label[for=login] {
+    color: #333333;
+    background-color: white; }
+.modal__login-form #login:checked ~ .modal__input-wrapper--email, .modal__login-form #login:checked ~ .modal__input-wrapper--confirm, .modal__login-form #login:checked ~ .modal__input-wrapper--checkin-submit {
+    display: none; }
+.modal__login-form #check-in:checked ~ .modal__input-wrapper--email, .modal__login-form #check-in:checked ~ .modal__input-wrapper--confirm, .modal__login-form #check-in:checked ~ .modal__input-wrapper--checkin-submit {
+    display: block; }
+.modal__login-form #check-in:checked ~ .modal__input-wrapper--login-submit, .modal__login-form #check-in:checked ~ .modal__input-wrapper--recall-password {
+    display: none; }
+.modal__input-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    color: white; }
+.modal__input-wrapper .btn-submit {
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: auto; }
+.modal__input-wrapper a {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 5px 0;
+      font-size: 14px;
+      text-decoration: none;
+      color: inherit; }
+.modal__input-wrapper label {
+      display: block;
+      width: 50%;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+      color: white;
+      background-color: transparent;
+      border: 2px solid white;
+      cursor: pointer; }
+.modal__input-wrapper label:hover, .modal__input-wrapper label:active, .modal__input-wrapper label.active {
+        color: #333333;
+        background-color: white; }
+.modal__input-wrapper--control {
+      margin-bottom: 30px; }
+.modal__input-name, .modal__input-password, .modal__input-email {
+    width: 100%;
+    height: 44px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: none;
+    border-radius: 3px; }
 @-webkit-keyframes modal-backdrop-show {
   0% {
     opacity: 0; }
@@ -1897,6 +1961,7 @@ a.btn--disabled {
       margin-bottom: 0; }
 .map__inner {
   width: 100%;
+  max-width: 100%;
   min-height: 320px;
   height: 100%;
   background-color: #f6f6f6; }
@@ -2027,7 +2092,7 @@ a.btn--disabled {
 .contacts-page .contacts__part-wrapper > * {
       width: auto; }
 .contacts-page .map {
-    width: 100%; }
+    max-width: 100%; }
 .contacts-page__wrapper {
     padding-top: 30px;
     padding-bottom: 60px;
@@ -2352,6 +2417,11 @@ a.btn--disabled {
     font-size: 14px;
     font-weight: 500;
     cursor: pointer; }
+.car-wash__input-wrapper label .car-wash__service-name {
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      padding-right: 20px; }
 .car-wash__input-wrapper label:hover, .car-wash__input-wrapper label:active {
       color: white;
       background: #303030; }
@@ -2367,7 +2437,11 @@ a.btn--disabled {
 .car-wash #price-item-1:checked + label[for=price-item-1],
 .car-wash #price-item-2:checked + label[for=price-item-2],
 .car-wash #price-item-3:checked + label[for=price-item-3],
-.car-wash #price-item-4:checked + label[for=price-item-4] {
+.car-wash #price-item-4:checked + label[for=price-item-4],
+.car-wash #price-item-5:checked + label[for=price-item-5],
+.car-wash #price-item-6:checked + label[for=price-item-6],
+.car-wash #price-item-7:checked + label[for=price-item-7],
+.car-wash #price-item-8:checked + label[for=price-item-8] {
   color: white;
   background: #303030; }
 .swiper-button-next,
@@ -2650,6 +2724,37 @@ a.btn--disabled {
 .timepicker li.cell-2:hover {
       background: #ccc;
       color: #555; }
+.page-404 {
+  position: relative; }
+.page-404__background {
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+    padding: 40px 35px;
+    text-align: center;
+    background: url(../img/page-404-mobile@1x.jpg) no-repeat center center;
+    background-size: cover; }
+.page-404__background::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.75); }
+.page-404__404 {
+    position: relative;
+    z-index: 1;
+    display: block;
+    height: auto;
+    margin: auto;
+    color: white;
+    font-size: 120px;
+    font-weight: 500; }
+.page-404__add-text {
+    display: block;
+    font-size: 16px; }
 @media (min-width: 375px) {
       .logo img {
         clip: auto; } }
@@ -2732,6 +2837,27 @@ a.btn--disabled {
         padding-right: 40px; }
     .btn-submit {
       margin-left: 0; }
+      .modal__dialog {
+        width: 320px;
+        height: auto;
+        margin-top: 10px;
+        margin-right: 40px; }
+        .modal--open .modal__dialog {
+          -webkit-animation: modal-content-show 0.3s 1 both;
+                  animation: modal-content-show 0.3s 1 both; }
+      .modal__content {
+        min-height: auto; }
+      .modal__body {
+        -webkit-box-flex: 0;
+            -ms-flex-positive: 0;
+                flex-grow: 0; }
+    .modal--login {
+      -webkit-box-align: start !important;
+          -ms-flex-align: start !important;
+              align-items: flex-start !important;
+      -webkit-box-pack: end !important;
+          -ms-flex-pack: end !important;
+              justify-content: flex-end !important; }
     .top-slider__controls {
       display: block;
       position: relative;
@@ -3079,6 +3205,8 @@ a.btn--disabled {
       margin-right: 0 !important; }
     .car-wash__info-text {
       font-size: 18px; }
+      .car-wash__input-wrapper label {
+        font-size: 16px; }
   .action-slider__wrapper {
     padding-left: 40px;
     padding-right: 40px; }
@@ -3142,7 +3270,16 @@ a.btn--disabled {
         .service-item__input-wrapper--button {
           padding-top: 30px; }
       .service-item__contacts {
-        margin: auto; } }
+        margin: auto; }
+      .page-404__background {
+        min-height: 410px;
+        padding: 40px 60px;
+        background: url(../img/page-404-tablet@1x.jpg) no-repeat center center;
+        background-size: cover; }
+      .page-404__404 {
+        font-size: 180px; }
+      .page-404__add-text {
+        font-size: 18px; } }
 @media (min-width: 768px) and (min-width: 768px) {
   .about__img-wrapper {
     -webkit-box-flex: 0;
@@ -3154,12 +3291,6 @@ a.btn--disabled {
 @media (min-width: 992px) {
     .container {
       width: 100%; }
-      .modal__dialog {
-        width: 600px;
-        height: auto; }
-        .modal--open .modal__dialog {
-          -webkit-animation: modal-content-show 0.3s 1 both;
-                  animation: modal-content-show 0.3s 1 both; }
       .modal__backdrop {
         -webkit-animation: modal-backdrop-show 0.3s 1;
                 animation: modal-backdrop-show 0.3s 1; }
@@ -3183,7 +3314,7 @@ a.btn--disabled {
             flex-basis: 240px; } }
 @media (min-width: 1200px) {
     .container {
-      width: 1200px; }
+      width: 1180px; }
     h1 {
       font-size: 26px; }
     h2 {
@@ -3257,6 +3388,9 @@ a.btn--disabled {
         padding-right: 15px; }
     .burger {
       display: none; }
+      .modal__dialog {
+        margin-left: calc(50% + 250px);
+        margin-right: auto; }
     .user-nav {
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
@@ -3300,7 +3434,7 @@ a.btn--disabled {
       .intro__para {
         font-size: 18px; }
       .news__slides {
-        width: 1200px; }
+        width: 1180px; }
       .news__img-wrapper {
         height: 250px !important; }
       .services__item {
@@ -3421,6 +3555,38 @@ a.btn--disabled {
       .service-menu__item {
         -ms-flex-preferred-size: 260px;
             flex-basis: 260px; }
+  .car-wash__price-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .car-wash__price-help {
+      width: 100%; }
+      .car-wash__input-wrapper label {
+        font-size: 18px; }
+    .car-wash__input-wrapper {
+      width: 525px;
+      background: initial;
+      border-right: initial; }
+      .car-wash__input-wrapper:nth-child(odd) {
+        background: initial;
+        border-left: none; }
+    .car-wash__input-wrapper:nth-child(4n+2) {
+      background: white !important;
+      border-left: none !important;
+      border-right: none !important; }
+    .car-wash__input-wrapper:nth-child(4n+4) {
+      background: #f6f6f6 !important;
+      border-left: 2px solid #303030 !important;
+      border-right: none !important; }
+    .car-wash__input-wrapper:nth-child(4n+3) {
+      background: white !important;
+      border-right: 2px solid #303030 !important;
+      border-left: none !important; }
   .action-slider__wrapper {
     width: 1120px;
     padding: 0;
@@ -3430,7 +3596,7 @@ a.btn--disabled {
       padding-left: 60px;
       padding-right: 60px; }
   .info-block__inner {
-    width: 1200px;
+    width: 1180px;
     margin-left: auto;
     margin-right: auto; }
       .service-item__header {
@@ -3482,7 +3648,13 @@ a.btn--disabled {
         .service-item__contacts > * {
           margin-left: 10px;
           margin-right: 10px;
-          margin-bottom: 0; } }
+          margin-bottom: 0; }
+      .page-404__background {
+        min-height: 510px;
+        background: url(../img/page-404-desktop@1x.jpg) no-repeat center center;
+        background-size: cover; }
+      .page-404__404 {
+        font-size: 220px; } }
 @media (min-width: 1920px) {
       .contacts-page__wrapper::after {
         width: 42%; } }

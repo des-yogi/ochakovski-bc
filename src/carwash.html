@@ -27,7 +27,7 @@
             </article>
 
             <article class="user-nav" role="navigation">
-              <a href="" class="user-nav__link">
+              <a class="user-nav__link" data-toggle="modal" data-target="#modal-login" href="/">
                 <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#login-icon"></use></svg>
               </a>
             </article>
@@ -261,15 +261,44 @@
                     </label>
                   </div>
 
+                  <div class="car-wash__input-wrapper">
+                    <input id="price-item-5" type="checkbox" name="" value="80" hidden>
+                    <label for="price-item-5" class="car-wash__price-label">
+                      <span class="car-wash__service-name">Уборка салона пылесосом</span>
+                      <span class="car-wash__value">45</span>
+                    </label>
+                  </div>
+
+                  <div class="car-wash__input-wrapper">
+                    <input id="price-item-6" type="checkbox" name="" value="80" hidden>
+                    <label for="price-item-6" class="car-wash__price-label">
+                      <span class="car-wash__service-name">Уборка багажника пылесосом</span>
+                      <span class="car-wash__value">20</span>
+                    </label>
+                  </div>
+
+                  <div class="car-wash__input-wrapper">
+                    <input id="price-item-7" type="checkbox" name="" value="80" hidden>
+                    <label for="price-item-7" class="car-wash__price-label">
+                      <span class="car-wash__service-name">Натирание уплотнителя от замерзания</span>
+                      <span class="car-wash__value">30</span>
+                    </label>
+                  </div>
+
+                  <div class="car-wash__input-wrapper">
+                    <input id="price-item-8" type="checkbox" name="" value="80" hidden>
+                    <label for="price-item-8" class="car-wash__price-label">
+                      <span class="car-wash__service-name">Влажная уборка салона</span>
+                      <span class="car-wash__value">35</span>
+                    </label>
+                  </div>
+
                 </form>
               </article>
 
             </div>
 
           </article>
-
-
-
 
           <article class="info-block">
             <div class="container">
@@ -311,6 +340,8 @@
     </div>
 
   </div>
+
+  @@include('blocks/modal/modal.html')
 
   @@include('_include/page_bottom.html')
 

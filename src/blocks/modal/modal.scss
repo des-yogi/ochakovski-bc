@@ -27,7 +27,7 @@ $z-index-modal:               100 !default;
   display: none;
   overflow: hidden;
   position: fixed;
-  top: 0;
+  top: 65px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -45,13 +45,31 @@ $z-index-modal:               100 !default;
     width: 100%;
     height: 100%;
 
-    @media (min-width: $screen-lg) {
-      width: 600px;
+    @media (min-width: $screen-md) {
+      width: 320px;
       height: auto;
+      margin-top: 10px;
+      margin-right: 40px;
 
       #{$block-name}--open & {
         animation: modal-content-show $transition-time 1 both;
       }
+    }
+
+    /* @media (min-width: $screen-lg) {
+      width: 600px;
+      height: auto;
+      margin-top: 10px;
+      margin-right: 40px;
+
+      #{$block-name}--open & {
+        animation: modal-content-show $transition-time 1 both;
+      }
+    } */
+
+    @media (min-width: $screen-xl) {
+      margin-left: calc(50% + 250px);
+      margin-right: auto;
     }
   }
 
@@ -61,8 +79,12 @@ $z-index-modal:               100 !default;
     flex-direction: column;
     min-width: 100%;
     min-height: 100%;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
     outline: 0;
+
+    @media (min-width: $screen-md) {
+      min-height: auto;
+    }
   }
 
   &__header {
@@ -86,8 +108,12 @@ $z-index-modal:               100 !default;
   }
 
   &__body {
-    padding: 0 10px;
+    padding: 30px 20px;
     flex-grow: 1;
+
+    @media (min-width: $screen-md) {
+      flex-grow: 0;
+    }
   }
 
   &__footer {
@@ -97,7 +123,7 @@ $z-index-modal:               100 !default;
 
   &__backdrop {
     position: fixed;
-    top: 0;
+    top: 65px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -117,9 +143,111 @@ $z-index-modal:               100 !default;
       align-items: center;
     }
   }
+
+  &__login-form {
+
+    input[type=radio] {
+      display: none;
+    }
+
+    #check-in:checked ~ .modal__input-wrapper label[for=check-in],
+    #login:checked ~ .modal__input-wrapper label[for=login] {
+      color: $title-color;
+      background-color: $white;
+    }
+
+    #login:checked ~ .modal__input-wrapper {
+      &--email,
+      &--confirm,
+      &--checkin-submit {
+        display: none;
+      }
+    }
+
+    #check-in:checked ~ .modal__input-wrapper {
+      &--email,
+      &--confirm,
+      &--checkin-submit {
+        display: block;
+      }
+
+      &--login-submit,
+      &--recall-password {
+        display: none;
+      }
+    }
+  }
+
+
+  &__input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    color: $white;
+
+    .btn-submit {
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    a {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 5px 0;
+      font-size: 14px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    label {
+      display: block;
+      width: 50%;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+      color: $white;
+      background-color: transparent;
+      border: 2px solid $white;
+      cursor: pointer;
+
+      &:hover,
+      &:active,
+      &.active {
+        color: $title-color;
+        background-color: $white;
+        // border-color: $bgr-dark;
+      }
+    }
+
+    &--control {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__input-name,
+  &__input-password,
+  &__input-email {
+    width: 100%;
+    height: 44px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: none;
+    border-radius: 3px;
+  }
+
+  &--login {
+
+    @media (min-width: $screen-md) {
+      align-items: flex-start !important;
+      justify-content: flex-end !important;
+    }
+  }
+
+
 }
-
-
 
 @keyframes modal-backdrop-show {
 

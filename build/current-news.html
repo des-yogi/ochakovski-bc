@@ -39,8 +39,10 @@
             </article>
 
             <article class="user-nav" role="navigation">
-              <a href="" class="user-nav__link">
-                <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#login-icon"></use></svg>
+              <a class="user-nav__link" data-toggle="modal" data-target="#modal-login" href="/">
+                <svg width="20" height="20">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#login-icon"></use>
+                </svg>
               </a>
             </article>
 
@@ -195,6 +197,69 @@
     </div>
 
   </div>
+
+
+  <div id="modal-login" class="modal  modal--login" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <!-- <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a> -->
+          <h4 class="modal__title  visually-hidden">Форма входа и регистрации</h4>
+        </div>
+        <div class="modal__body">
+
+          <form class="modal__login-form" id="login-form" name="login-form" action="" method="">
+
+            <input id="check-in" type="radio" name="login" value="">
+            <input id="login" type="radio" name="login" value="" checked>
+
+            <div class="modal__input-wrapper  modal__input-wrapper--control">
+              <label for="check-in">Регистрация</label>
+              <label for="login">Вход</label>
+            </div>
+
+            <div class="modal__input-wrapper  modal__input-wrapper">
+              <input class="modal__input-name" type="text" name="name" value="" placeholder="Логин">
+              <span class="error-message  error-message--login"></span>
+            </div>
+
+            <div class="modal__input-wrapper  modal__input-wrapper--email">
+              <input class="modal__input-email" type="email" name="email" value="" placeholder="Ваш Email">
+              <span class="error-message  error-message--login"></span>
+            </div>
+
+            <div class="modal__input-wrapper">
+              <input class="modal__input-password" type="password" name="password" value="" placeholder="Пароль">
+              <span class="error-message  error-message--password"></span>
+            </div>
+
+            <div class="modal__input-wrapper  modal__input-wrapper--confirm">
+              <input class="modal__input-password" type="password" name="password" value="" placeholder="Подтвердите пароль">
+              <span class="error-message  error-message--password"></span>
+            </div>
+
+            <div class="modal__input-wrapper  modal__input-wrapper--recall-password">
+              <a href="">Забыли пароль?</a>
+            </div>
+
+            <div class="modal__input-wrapper  modal__input-wrapper--checkin-submit">
+              <button class="btn  btn-submit" type="submit" name="checkin-submit">Зарегистрироваться</button>
+            </div>
+
+            <div class="modal__input-wrapper  modal__input-wrapper--login-submit">
+              <button class="btn  btn-submit" type="submit" name="login-submit">Войти</button>
+            </div>
+
+          </form>
+
+        </div>
+        <!-- <div class="modal__footer">
+          <button type="button" class="btn" data-dismiss="modal">Закрыть</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
   <script src="js/script.min.js"></script>
 
 </body>

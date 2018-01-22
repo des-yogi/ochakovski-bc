@@ -34,7 +34,7 @@
     }
 
     @media (min-width: $screen-xl) {
-      width: $screen-xl;
+      width: $screen-xl - 20;
       margin-left: auto;
       margin-right: auto;
     }

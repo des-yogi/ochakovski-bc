@@ -27,9 +27,7 @@
     <div class="page__content">
 
       <header class="page-header" role="banner">
-
         <div class="page-header__top">
-
           <div class="page-header__container">
 
             <article class="logo">
@@ -38,9 +36,11 @@
               </a>
             </article>
 
-            <article class="user-nav">
-              <a class="user-nav__link" data-toggle="modal" data-target="#modal-login" href="/">
-                <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#login-icon"></use></svg>
+            <article class="user-nav" role="navigation">
+              <a href="/" class="user-nav__link" data-toggle="modal" data-target="#modal-login">
+                <svg width="20" height="20">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#login-icon"></use>
+                </svg>
               </a>
             </article>
 
@@ -50,7 +50,7 @@
               </a>
             </div>
 
-            <nav class="main-nav">
+            <nav class="main-nav" role="navigation">
               <ul class="main-nav__list">
                 <li class="main-nav__item">
                   <a href="news.html" class="main-nav__link">Новости</a>
@@ -73,13 +73,27 @@
           </div>
         </div>
 
+        <div class="page-404">
+          <div class="page-404__background">
+            <span class="page-404__404">404
+              <span class="page-404__add-text">Страница не найдена или никогда не существовала…</span>
+            </span>
+          </div>
+        </div>
+
       </header>
+
 
       <main role="main">
 
-        <article class="contacts-page">
+        <h1 class="visually-hidden">Бизнес-центр «Очаковский»</h1>
 
-          <div class="container  contacts-page__wrapper">
+      </main>
+
+      <div class="page__footer-wrapper">
+        <footer class="page-footer" role="contentinfo">
+
+          <div class="page-footer__inner">
 
             <article class="contacts">
               <h2 class="contacts__title">Свяжитесь с нами</h2>
@@ -98,56 +112,25 @@
               </div>
             </article>
 
-            <article class="write-us">
-              <h2 class="write-us__title">Напишите нам</h2>
-              <form class="write-us__form" action="" method="" name="write-us">
-                <div class="write-us__input-wrapper">
-                  <input type="text" class="write-us__text-field" name="name" placeholder="Ваше имя">
-                  <span class="error-message  write-us__error-message"></span>
-                </div>
-                <div class="write-us__input-wrapper">
-                  <input type="tel" class="write-us__text-field" name="tel" placeholder="Ваше телефон">
-                  <span class="error-message  write-us__error-message"></span>
-                </div>
-                <div class="write-us__input-wrapper">
-                  <input type="email" class="write-us__text-field" name="email" placeholder="Ваш e-mail">
-                  <span class="error-message  write-us__error-message"></span>
-                </div>
-                <div class="write-us__input-wrapper">
-                  <textarea name="message" placeholder="Ваше сообщение"></textarea>
-                  <span class="error-message  write-us__error-message"></span>
-                </div>
-                <div class="write-us__input-wrapper">
-                  <button class="btn-submit" type="submit" name="submit-form">Отправить</button>
-                </div>
-              </form>
+            <article class="map">
+              <div class="map__inner">
+                <iframe src="https://snazzymaps.com/embed/39867" style="border:none;width:100%"></iframe>
+              </div>
             </article>
 
           </div>
 
-          <article class="map">
-            <div class="map__inner">
-              <iframe src="https://snazzymaps.com/embed/39867" style="border:none;width:100%"></iframe>
-            </div>
+          <article class="copyrights">
+            <div class="container  copyrights__wrapper">
+              <span class="copyrights__text">©&thinsp;2017. Бизнес-центр «Очаковский». All Rights Reserved.</span>
+              <a href="http://it-doors.com/" class="copyrights__logo" target="_blank" rel="nofollow" title="Разработчик сайта">
+                <svg width="90" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#it-doors-logo"></use></svg>
+              </a>
+              </div>
           </article>
 
-        </article>
-
-      </main>
-
-      <div class="page__footer-wrapper">
-        <footer class="page-footer  page-footer--contacts" role="contentinfo">
-          <!-- <div class="page-footer__inner"> -->
-            <article class="copyrights">
-              <div class="container  copyrights__wrapper">
-                <span class="copyrights__text">©&thinsp;2017. Бизнес-центр «Очаковский». All Rights Reserved.</span>
-                <a href="http://it-doors.com/" class="copyrights__logo" target="_blank" rel="nofollow" title="Разработчик сайта">
-                  <svg width="90" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#it-doors-logo"></use></svg>
-                </a>
-              </div>
-            </article>
-          <!-- </div> -->
         </footer>
+
       </div>
 
     </div>

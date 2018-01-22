@@ -43,7 +43,8 @@
     "action-slider": [],
     "info-block": [],
     "service-item": [],
-    "timepicker": []
+    "timepicker": [],
+    "page-404": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

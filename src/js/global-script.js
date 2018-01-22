@@ -145,8 +145,11 @@ $(document).ready(function ($) {
     }
   });*/
 
+  var timepicker = document.querySelector('.timepicker');
 
-  $('.timepicker').timepicker();
+  if (timepicker) {
+    $('.timepicker').timepicker();
+  }
 
 });
 
@@ -224,6 +227,20 @@ $(document).ready(function ($) {
   }
 
   carwashChooseBtn.addEventListener('click', carwashChooseBtnHandler);
+
+}());
+
+(function(){
+
+  var loginBtn = document.querySelector('.user-nav__link');
+
+  if (!loginBtn) {
+    return;
+  } else {
+    loginBtn.addEventListener('click', function(e) {
+      loginBtn.classList.toggle('active');
+    });
+  }
 
 }());
 

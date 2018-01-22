@@ -27,7 +27,7 @@
             </article>
 
             <article class="user-nav">
-              <a href="" class="user-nav__link">
+              <a class="user-nav__link" data-toggle="modal" data-target="#modal-login" href="/">
                 <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#login-icon"></use></svg>
               </a>
             </article>
@@ -125,20 +125,24 @@
 
       <div class="page__footer-wrapper">
         <footer class="page-footer  page-footer--contacts" role="contentinfo">
-          <article class="copyrights">
-            <div class="container  copyrights__wrapper">
-              <span class="copyrights__text">©&thinsp;2017. Бизнес-центр «Очаковский». All Rights Reserved.</span>
-              <a href="http://it-doors.com/" class="copyrights__logo" target="_blank" rel="nofollow" title="Разработчик сайта">
-                <svg width="90" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#it-doors-logo"></use></svg>
-              </a>
-            </div>
-          </article>
+          <!-- <div class="page-footer__inner"> -->
+            <article class="copyrights">
+              <div class="container  copyrights__wrapper">
+                <span class="copyrights__text">©&thinsp;2017. Бизнес-центр «Очаковский». All Rights Reserved.</span>
+                <a href="http://it-doors.com/" class="copyrights__logo" target="_blank" rel="nofollow" title="Разработчик сайта">
+                  <svg width="90" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#it-doors-logo"></use></svg>
+                </a>
+              </div>
+            </article>
+          <!-- </div> -->
         </footer>
       </div>
 
     </div>
 
   </div>
+
+  @@include('blocks/modal/modal.html')
 
   @@include('_include/page_bottom.html')
 </body>

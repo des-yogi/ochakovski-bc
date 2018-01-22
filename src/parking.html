@@ -27,7 +27,7 @@
             </article>
 
             <article class="user-nav" role="navigation">
-              <a href="" class="user-nav__link">
+              <a href="" class="user-nav__link" data-toggle="modal" data-target="#modal-login" href="/">
                 <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#login-icon"></use></svg>
               </a>
             </article>
@@ -187,6 +187,8 @@
     </div>
 
   </div>
+
+  @@include('blocks/modal/modal.html')
 
   @@include('_include/page_bottom.html')
 
