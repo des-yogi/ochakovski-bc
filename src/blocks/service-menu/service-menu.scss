@@ -12,18 +12,29 @@
   $block-name:                &; // #{$block-name}__element
 
   &__inner {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: $white;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__list {
     display: flex;
-    width: 180px;
+    // flex-shrink: 1;
+    // width: 180px;
+    width: 100%;
     margin: 0;
     list-style-type: none;
     text-decoration: none;
-    overflow: hidden;  // откл. для swiper-slider
+    // overflow: hidden;  // откл. для swiper-slider
+    box-sizing: border-box;
 
     @media (min-width: $screen-md) {
       justify-content: space-between;
@@ -31,23 +42,25 @@
       width: 100%;
       padding-left: 40px;
       padding-right: 40px;
+      // overflow: hidden;
     }
   }
 
   &__item {
-    flex-basis: 100%;
+    width: 180px;
+    // max-width: 100%;
     flex-shrink: 0;
 
     @media (min-width: $screen-md) {
-      flex-basis: 180px;
+      width: 180px;
     }
 
     @media (min-width: $screen-lg) {
-      flex-basis: 240px;
+      width: 240px;
     }
 
     @media (min-width: $screen-xl) {
-      flex-basis: 260px;
+      width: 260px;
     }
   }
 
@@ -122,8 +135,11 @@
   }
 
   &__btn-link {
+    position: absolute;
+    z-index: 5;
     @include text-hide;
     display: block;
+    flex-shrink: 0;
     width: 30px;
     height: 44px;
     padding-top: 13px;
@@ -149,7 +165,14 @@
       pointer-events: none;
     } */
 
+    &--next {
+      top: 0;
+      right: 0;
+    }
+
     &--prev {
+      top: 0;
+      left: 0;
 
       svg {
         transform: rotate(180deg);
