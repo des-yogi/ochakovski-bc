@@ -289,7 +289,7 @@ gulp.task('sprite:svg', function (callback) {
           return {
             plugins: [{
               cleanupIDs: {
-                minify: true
+                minify: false
               }
             }]
           }
@@ -445,7 +445,7 @@ gulp.task('img:opt', function (callback) {
 gulp.task('build', function (callback) {
   gulpSequence(
     ['clean'],
-    ['sprite:svg', 'sprite:png', 'favicons'],
+    ['sprite:svg', 'sprite:png'],
     ['style', 'style:single', 'js', 'copy:css', 'copy:img', 'copy:js', 'copy:fonts'],
     'html',
     callback

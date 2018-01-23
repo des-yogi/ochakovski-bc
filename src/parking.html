@@ -6,6 +6,14 @@
   <title>Услуги: Парковка</title>
   <meta name="description" content="">
   @@include('_include/page_head.html')
+  <script>
+    var siteParameters = {
+      pages: {
+        currentPage: '/parking',
+        homepage: ''
+      }
+    };
+  </script>
 </head>
 
 <body>
@@ -27,7 +35,7 @@
             </article>
 
             <article class="user-nav" role="navigation">
-              <a href="" class="user-nav__link">
+              <a href="" class="user-nav__link" data-toggle="modal" data-target="#modal-login" href="/">
                 <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#login-icon"></use></svg>
               </a>
             </article>
@@ -63,38 +71,42 @@
 
       </header>
 
-      <main role="main">
+      <main role="main" data-router="0">
 
         <article class="service-item">
 
           <section class="service-menu">
             <div class="container">
 
-              <div class="service-menu__inner">
+              <div class="service-menu__inner  swiper-container">
 
                 <a class="service-menu__btn-link  service-menu__btn-link--prev" href="">Предыдущий пункт меню
-                  <svg width="9" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#next-icon"></use></svg>
+                  <svg width="9" height="18">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#next-icon"></use>
+                  </svg>
                 </a>
 
-                <ul class="service-menu__list" role="navigation">
-                  <li class="service-menu__item  service-menu__item--parking" id="parking">
+                <ul class="service-menu__list  swiper-wrapper" role="navigation">
+                  <li class="service-menu__item  service-menu__item--parking  swiper-slide" id="parking">
                     <a class="service-menu__link  service-menu__link--parking  active" href="parking.html">Парковка</a>
                   </li>
-                  <li class="service-menu__item  service-menu__item--carwash" id="carwash">
+                  <li class="service-menu__item  service-menu__item--carwash  swiper-slide" id="carwash">
                     <a class="service-menu__link  service-menu__link--carwash" href="carwash.html">Автомойка</a>
                   </li>
-                  <li class="service-menu__item  service-menu__item--restaurant" id="restaurant">
+                  <li class="service-menu__item  service-menu__item--restaurant  swiper-slide" id="restaurant">
                     <a class="service-menu__link  service-menu__link--restaurant" href="">Ресторан</a>
                   </li>
                 </ul>
 
                 <a class="service-menu__btn-link  service-menu__btn-link--next" href="">Следующий пункт меню
-                  <svg width="9" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#next-icon"></use></svg>
+                  <svg width="9" height="18">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#next-icon"></use>
+                  </svg>
                 </a>
 
               </div>
-
             </div>
+
           </section>
 
           <div class="container">
@@ -187,6 +199,8 @@
     </div>
 
   </div>
+
+  @@include('blocks/modal/modal.html')
 
   @@include('_include/page_bottom.html')
 

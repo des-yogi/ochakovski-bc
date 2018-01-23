@@ -118,35 +118,59 @@ $(document).ready(function ($) {
     }
   });
 
-  /*var serviceMenuSwiper = new Swiper('.service-menu__inner', {
+  var screenWidth = document.documentElement.clientWidth;
+  // var router = document.querySelector('main').dataset;
+  // var initSlide = parseInt(router.router, 10);
+
+  if (screenWidth >= 768) { return; }
+
+  var initialSlide = getSlideNum (siteParameters);
+
+  var serviceMenuSwiper = new Swiper('.service-menu__inner', {
     speed: 400,
-    spaceBetween: 0,
-    slidesPerView: 3,
-    centeredSlides: false,
-    roundLengths: true,
-    effect: 'slide',
-    grabCursor: false,
-    // loop: true,
-    breakpoints: {
-      767: {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        centeredSlides: true
-      },
-      1199: {
-        slidesPerView: 3,
-        spaceBetween: 0,
-        centeredSlides: true
-      }
-    },
+    initialSlide: initialSlide,
+    spaceBetween: 60,
+    slidesPerView: 1,
+    centeredSlides: true,
+    effect: 'flip',
+
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.service-menu__btn-link--next',
+      prevEl: '.service-menu__btn-link--prev',
     }
-  });*/
 
+  });
 
-  $('.timepicker').timepicker();
+  function getSlideNum (param) {
+
+    var initSlideNum = 0;
+
+    if (param.pages.currentPage === '/parking') {
+      initSlideNum = 0;
+    }
+
+    if (param.pages.currentPage === '/carwash') {
+      initSlideNum = 1;
+    }
+
+    return initSlideNum;
+  };
+
+  /*if (router.dataset == '0') {
+    serviceMenuSwiper.slideTo(0);
+  } else if (router.dataset == '1') {
+      serviceMenuSwiper.slideTo(1);
+  } return;*/
+
+});
+
+$(document).ready(function ($) {
+
+  var timepicker = document.querySelector('.timepicker');
+
+  if (timepicker) {
+    $('.timepicker').timepicker();
+  }
 
 });
 
@@ -224,6 +248,20 @@ $(document).ready(function ($) {
   }
 
   carwashChooseBtn.addEventListener('click', carwashChooseBtnHandler);
+
+}());
+
+(function(){
+
+  var loginBtn = document.querySelector('.user-nav__link');
+
+  if (!loginBtn) {
+    return;
+  } else {
+    loginBtn.addEventListener('click', function(e) {
+      loginBtn.classList.toggle('active');
+    });
+  }
 
 }());
 
