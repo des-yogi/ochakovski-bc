@@ -34,11 +34,11 @@
               </a>
             </article>
 
-            <article class="user-nav" role="navigation">
+            <div class="user-nav" role="navigation">
               <a href="" class="user-nav__link" data-toggle="modal" data-target="#modal-login" href="/">
                 <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#login-icon"></use></svg>
               </a>
-            </article>
+            </div>
 
             <div class="burger">
               <a id="burger" class="burger__link">Кнопка меню
@@ -86,7 +86,7 @@
                   </svg>
                 </a>
 
-                <ul class="service-menu__list  swiper-wrapper" role="navigation">
+                <ul class="service-menu__list  swiper-wrapper">
                   <li class="service-menu__item  service-menu__item--parking  swiper-slide" id="parking">
                     <a class="service-menu__link  service-menu__link--parking  active" href="parking.html">Парковка</a>
                   </li>
@@ -120,7 +120,7 @@
 
           <section class="service-item__order-form">
 
-            <form id="place-order-form" class="form  service-item__form" action="" method="">
+            <form id="place-order-form" class="form  service-item__form" action="/" method="post">
               <div class="service-item__input-container">
                 <div class="service-item__input-wrapper">
                   <input type="text" name="name" placeholder="Ваше имя">

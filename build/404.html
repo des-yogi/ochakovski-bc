@@ -4,24 +4,7 @@
   <meta charset="utf-8">
   <title>Бизнес-центр «Очаковский»</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="MobileOptimized" content="320">
-  <meta name="format-detection" content="telephone=no">
-  <link href="css/normalize.min.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet" media="screen">
-  <script>
-    // Picture element HTML5 shiv
-    document.createElement("picture");
-  </script>
-  <script>
-    var siteParameters = {
-      pages: {
-        currentPage: null,
-        homepage: ''
-      }
-    };
-  </script>
-<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  <meta name="MobileOptimized" content="320">  <meta name="format-detection" content="telephone=no">  <link href="css/normalize.min.css" rel="stylesheet">  <link href="css/style.min.css" rel="stylesheet" media="screen">  <script>    // Picture element HTML5 shiv    document.createElement("picture");  </script>  <script>    var siteParameters = {      pages: {        currentPage: null,        homepage: ''      }    };  </script><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 <link rel="manifest" href="/img/manifest.json">
@@ -42,13 +25,13 @@
                 <img src="img/ochakovski-bc.svg" alt="Очаковский бизнес-центр" width="187" height="40">
               </a>
             </article>
-            <article class="user-nav" role="navigation">
+            <div class="user-nav" role="navigation">
               <a href="/" class="user-nav__link" data-toggle="modal" data-target="#modal-login">
                 <svg width="20" height="20">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#login-icon"/>
                 </svg>
               </a>
-            </article>
+            </div>
             <div class="burger">
               <a id="burger" class="burger__link">Кнопка меню
                 <span class="burger__item"></span>
@@ -98,7 +81,7 @@
           <h4 class="modal__title  visually-hidden">Форма входа и регистрации</h4>
         </div>
         <div class="modal__body">
-          <form class="modal__login-form" id="login-form" name="login-form" action="" method="">
+          <form class="modal__login-form" id="login-form" name="login-form" action="/" method="post">
             <input id="check-in" type="radio" name="login" value="">
             <input id="login" type="radio" name="login" value="" checked>
             <div class="modal__input-wrapper  modal__input-wrapper--control">
@@ -137,7 +120,5 @@
         </div> -->
       </div>
     </div>
-  </div>
-  <script src="js/script.min.js"></script>
-</body>
+  </div>  <script src="js/script.min.js"></script></body>
 </html>

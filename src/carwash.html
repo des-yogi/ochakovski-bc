@@ -34,11 +34,11 @@
               </a>
             </article>
 
-            <article class="user-nav" role="navigation">
+            <div class="user-nav" role="navigation">
               <a class="user-nav__link" data-toggle="modal" data-target="#modal-login" href="/">
                 <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#login-icon"></use></svg>
               </a>
-            </article>
+            </div>
 
             <div class="burger">
               <a id="burger" class="burger__link">Кнопка меню
@@ -86,7 +86,7 @@
                   </svg>
                 </a>
 
-                <ul class="service-menu__list  swiper-wrapper" role="navigation">
+                <ul class="service-menu__list  swiper-wrapper">
                   <li class="service-menu__item  service-menu__item--parking  swiper-slide" id="parking">
                     <a class="service-menu__link  service-menu__link--parking" href="parking.html">Парковка</a>
                   </li>
@@ -207,7 +207,7 @@
 
               <div class="service-item__order-form  car-wash__order-form">
 
-                <form id="carwash-order-form" class="form  service-item__form  car-wash__form" action="" method="" name="carwash-order-form">
+                <form id="carwash-order-form" class="form  service-item__form  car-wash__form" action="/" method="post" name="carwash-order-form">
                   <div class="service-item__input-container">
                     <div class="service-item__input-wrapper">
                       <input type="text" name="name" placeholder="Ваше имя">
@@ -238,11 +238,11 @@
               </div>
 
               <article class="car-wash__price">
-                <form class="car-wash__price-form" action="" method="" name="carwash-price-form">
+                <form class="car-wash__price-form" action="/" method="post" name="carwash-price-form">
                   <p class="car-wash__price-help">*&thinsp;Сделайте выбор, нажав на требуемый пункт в прайсе.</p>
 
                   <div class="car-wash__input-wrapper">
-                    <input id="price-item-1" type="checkbox" name="" value="80" hidden>
+                    <input id="price-item-1" type="checkbox" name="price-item-1" value="80" hidden>
                     <label for="price-item-1" class="car-wash__price-label">
                       <span class="car-wash__service-name">Бесконтактная мойка</span>
                       <span class="car-wash__value">80</span>
@@ -250,7 +250,7 @@
                   </div>
 
                   <div class="car-wash__input-wrapper">
-                    <input id="price-item-2" type="checkbox" name="" value="80" hidden disabled>
+                    <input id="price-item-2" type="checkbox" name="price-item-2" value="80" hidden disabled>
                     <label for="price-item-2" class="car-wash__price-label">
                       <span class="car-wash__service-name">Ручная мойка (Нанопена)</span>
                       <span class="car-wash__value">100</span>
@@ -258,7 +258,7 @@
                   </div>
 
                   <div class="car-wash__input-wrapper">
-                    <input id="price-item-3" type="checkbox" name="" value="80" hidden>
+                    <input id="price-item-3" type="checkbox" name="price-item-3" value="80" hidden>
                     <label for="price-item-3" class="car-wash__price-label">
                       <span class="car-wash__service-name">Экспресс мойка</span>
                       <span class="car-wash__value">60</span>
@@ -266,7 +266,7 @@
                   </div>
 
                   <div class="car-wash__input-wrapper">
-                    <input id="price-item-4" type="checkbox" name="" value="80" hidden>
+                    <input id="price-item-4" type="checkbox" name="price-item-4" value="80" hidden>
                     <label for="price-item-4" class="car-wash__price-label">
                       <span class="car-wash__service-name">Сбивка водой</span>
                       <span class="car-wash__value">40</span>
@@ -274,7 +274,7 @@
                   </div>
 
                   <div class="car-wash__input-wrapper">
-                    <input id="price-item-5" type="checkbox" name="" value="80" hidden>
+                    <input id="price-item-5" type="checkbox" name="price-item-5" value="80" hidden>
                     <label for="price-item-5" class="car-wash__price-label">
                       <span class="car-wash__service-name">Уборка салона пылесосом</span>
                       <span class="car-wash__value">45</span>
@@ -282,7 +282,7 @@
                   </div>
 
                   <div class="car-wash__input-wrapper">
-                    <input id="price-item-6" type="checkbox" name="" value="80" hidden>
+                    <input id="price-item-6" type="checkbox" name="price-item-6" value="80" hidden>
                     <label for="price-item-6" class="car-wash__price-label">
                       <span class="car-wash__service-name">Уборка багажника пылесосом</span>
                       <span class="car-wash__value">20</span>
@@ -290,7 +290,7 @@
                   </div>
 
                   <div class="car-wash__input-wrapper">
-                    <input id="price-item-7" type="checkbox" name="" value="80" hidden>
+                    <input id="price-item-7" type="checkbox" name="price-item-7" value="80" hidden>
                     <label for="price-item-7" class="car-wash__price-label">
                       <span class="car-wash__service-name">Натирание уплотнителя от замерзания</span>
                       <span class="car-wash__value">30</span>
@@ -298,7 +298,7 @@
                   </div>
 
                   <div class="car-wash__input-wrapper">
-                    <input id="price-item-8" type="checkbox" name="" value="80" hidden>
+                    <input id="price-item-8" type="checkbox" name="price-item-8" value="80" hidden>
                     <label for="price-item-8" class="car-wash__price-label">
                       <span class="car-wash__service-name">Влажная уборка салона</span>
                       <span class="car-wash__value">35</span>

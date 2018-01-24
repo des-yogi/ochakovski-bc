@@ -1,15 +1,18 @@
 (function(){
 
   var burger = document.querySelector('#burger');
+  var burgerLink = document.querySelector('.burger__link');
   var mainNav = document.querySelector('.main-nav');
   var body = document.querySelector('body');
 
   var openMenuHandler = function () {
     mainNav.classList.add('main-nav--open');
+    burgerLink.classList.add('active');
   }
 
   var closeMenuHandler = function () {
     mainNav.classList.remove('main-nav--open');
+    burgerLink.classList.remove('active');
   }
 
   var burgerClickHandler = function (e) {
