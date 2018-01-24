@@ -12,8 +12,18 @@
   padding: 20px 20px;
   background-color: rgba(0, 0, 0, 0.9);
   overflow-y: auto;
-  transform: translate(-105vw, 64px);
+  transform: translate(-200vw, 64px);
   transition: transform 0.35s ease-in-out;
+
+  @media (min-width: $screen-sm) {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+
+  @media (min-width: $screen-md) {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
 
   @media (min-width: $screen-xl) {
     position: static;
@@ -22,7 +32,8 @@
     height: auto;
     padding-top: 0;
     padding-bottom: 0;
-    // align-self: center;
+    padding-left: 0;
+    padding-right: 0;
     transform: none;
     background-color: transparent;
   }
@@ -60,13 +71,16 @@
     padding: 0.5em;
     margin-top: 15px;
     margin-bottom: 25px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
     color: currentColor;
     transition: all 0.35s ease-in;
 
     &:hover,
+    &:active,
     &.active {
       background-color: $bgr-light;
       color: $title-color;
@@ -108,6 +122,8 @@
       padding-bottom: 20px;
       padding-left: 15px;
       padding-right: 15px;
+      font-size: 16px;
+      font-weight: 500;
     }
   }
 
