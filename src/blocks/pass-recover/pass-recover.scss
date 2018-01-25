@@ -1,0 +1,97 @@
+// В этом файле должны быть стили для БЭМ-блока pass-recover, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.pass-recover {
+  padding-bottom: 60px;
+
+  @include row (
+    $xs-grid-gutter:  0,
+    $sm-grid-gutter:  0,
+    $md-grid-gutter:  $grid-gutter-width,
+    $lg-grid-gutter:  $grid-gutter-width,
+    $xl-grid-gutter:  $grid-gutter-width
+  )
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 120px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__form {
+    color: $white;
+    background-color: $bgr-dark;
+
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  sm,
+      $column:  10,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col-offset (
+      $screen: sm,
+      $column: 1,
+      $columns: $grid-columns
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  6,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col-offset (
+      $screen: md,
+      $column: 3,
+      $columns: $grid-columns
+    )
+
+    @include col (
+      $screen:  lg,
+      $column:  4,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col-offset (
+      $screen: lg,
+      $column: 4,
+      $columns: $grid-columns
+    )
+  }
+
+  &__input-wrapper {
+    padding: 30px 20px;
+
+    input {
+      width: 100%;
+      height: 44px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 3px;
+    }
+
+    button {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .error-message--sucsess {
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+}
