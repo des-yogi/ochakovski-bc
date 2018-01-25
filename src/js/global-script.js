@@ -174,6 +174,25 @@ $(document).ready(function ($) {
 
 });
 
+
+$( document ).ready(function() {
+
+  $('.fancybox').fancybox({
+      padding: 0,
+      openEffect: 'elastic',
+      protect: true,
+      animationEffect : "zoom",
+      helpers:  {
+        overlay: {
+            css: {
+                'background' : 'rgba(0,0,0,0.6)'
+            }
+        }
+      }
+  });
+
+});
+
 (function(){
 
   /*function getSubDocument(embedding_element) {
