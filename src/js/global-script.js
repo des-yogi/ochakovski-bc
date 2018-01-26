@@ -51,21 +51,21 @@ $(document).ready(function ($) {
 
   var partnersLogoSwiper = new Swiper('.partners__inner', {
     speed: 400,
-    spaceBetween: 60,
-    slidesPerView: 4,
+    spaceBetween: 95,
+    slidesPerView: 'auto',
     // centeredSlides: true,
     roundLengths: true,
     effect: 'slide',
     grabCursor: true,
-    loop: true,
+    // loop: true,
     breakpoints: {
       767: {
-        slidesPerView: 2,
+        slidesPerView: 'auto',
         spaceBetween: 35,
         centeredSlides: false
       },
       1199: {
-        slidesPerView: 4,
+        slidesPerView: 'auto',
         spaceBetween: 60,
         centeredSlides: false
       }

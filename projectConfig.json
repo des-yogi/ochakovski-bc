@@ -45,7 +45,8 @@
     "service-item": [],
     "timepicker": [],
     "page-404": [],
-    "fancybox": []
+    "fancybox": [],
+    "pass-recover": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
