@@ -62,16 +62,18 @@
       <main role="main">
         <div class="container">
           <div class="news-page__header">
-            <h1 class="">Восстановление пароля</h1>
+            <h1 class="">Смена пароля</h1>
             <p class="news-page__text">
-              На указанный адрес электронной почты будет выслано письмо со ссылкой на страницу восстановления пароля.
+              Введите в форму новый пароль, не менее 8 символов…
             </p>
           </div>
           <div class="row  pass-recover">
             <form class="pass-recover__form" action="/" method="post" name="pass-recover">
               <div class="pass-recover__input-wrapper">
-                <span class="error-message  error-message--sucsess">Сообщение об уcпехе</span>
-                <input type="email" name="email" placeholder="Ваш Email">
+                <span class="error-message  error-message--sucsess  ">Сообщение об уcпехе</span>
+                <input type="password" name="password" placeholder="Новый пароль">
+                <span class="error-message"></span>
+                <input type="password" name="password-repeat" placeholder="Повтор нового пароля">
                 <span class="error-message"></span>
                 <button class="btn btn-submit  btn-submit" type="submit" name="submit">Отправить</button>
               </div>
