@@ -195,21 +195,7 @@ $( document ).ready(function() {
 
 (function(){
 
-  /*function getSubDocument(embedding_element) {
-
-    if (embedding_element.contentDocument) {
-      return embedding_element.contentDocument;
-    } else {
-      var subdoc = null;
-      try {
-        subdoc = embedding_element.getSVGDocument();
-      } catch(e) {}
-      return subdoc;
-    }
-  }*/
-
-
-  function selectPlace (elem) {
+  /*function selectPlace (elem) {
     var orderForm = document.querySelector('.service-item__order-form');
     elem.setAttribute('pointer-events', 'auto');
     elem.style.fill = '#303030';
@@ -248,13 +234,13 @@ $( document ).ready(function() {
 
   }
 
-  window.addEventListener("load", findSVGElements, false);
+  window.addEventListener("load", findSVGElements, false);*/
 
 }());
 
 (function(){
 
-  var carwashChooseBtn = document.querySelector(".btn-submit--carwash");
+/*  var carwashChooseBtn = document.querySelector(".btn-submit--carwash");
   var carwashOrderForm = document.querySelector(".car-wash__order-form");
 
   function carwashChooseBtnHandler (e) {
@@ -266,7 +252,7 @@ $( document ).ready(function() {
     return;
   }
 
-  carwashChooseBtn.addEventListener('click', carwashChooseBtnHandler);
+  carwashChooseBtn.addEventListener('click', carwashChooseBtnHandler);*/
 
 }());
 
